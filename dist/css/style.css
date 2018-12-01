@@ -1,0 +1,44 @@
+/* Use BEM methodology */
+
+/**
+* CONFIG
+*
+*  light-gray: #F7F7F7; - bg color in header
+*/
+
+/** 
+* HEADER 
+*/
+.welcome-wrapper {
+    height: 100vh;
+    width: 100wv;
+    background-color: #666;
+    /* background-image: url("../assets/logoug.png"); */
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+}
+
+/** 
+* NAVBAR 
+*/
+
+
+/** 
+* ANOTHER SECTION
+*/
+
+
+
+
+
+
+
+
+
+
+
+/**
+* COUNTRY SPRITE CLASSES
+* (Leave it at the bottom of the file)
+*/
