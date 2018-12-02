@@ -1,4 +1,5 @@
 # GIT
+git checkout layout
 [new], [update], [hotfix]
 git pull - before start working
 Use .gitignore if you need
