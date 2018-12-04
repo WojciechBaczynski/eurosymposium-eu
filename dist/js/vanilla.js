@@ -4,17 +4,17 @@ overview = {};
 keynoteSpeach = {};
 
 // Main InitView Function
-window.onload = function () {
+window.onload = function() {
   // Pass here all functions which should start at the beginning
   header.initHeaderView();
 };
 
 // ------------------- HEADER -------------------
-header.initHeaderView = function () {
+header.initHeaderView = function() {
   header.getSentenceContent();
 };
 
-header.setSentence = function (year, text) {
+header.setSentence = function(year, text) {
   var sentenceYear = document.querySelector(
     ".welcome-wrapper--sentence-content-year"
   );
@@ -26,12 +26,12 @@ header.setSentence = function (year, text) {
   sentenceText.textContent = text;
 };
 
-header.getSentenceContent = function () {
+header.getSentenceContent = function() {
   var sentences = header.sentences;
   var arrYear;
   var arrText;
 
-  sentences.forEach(function (sentence) {
+  sentences.forEach(function(sentence) {
     arrYear = sentence.year;
     arrText = sentence.sentence;
     header.setSentence(arrYear, arrText);
@@ -47,9 +47,9 @@ header.getSentenceContent = function () {
 
 // ------------------- ANOTHER SECTION -------------------
 
-
 // Long arrays and HTML templates leave at the bottom of the file
-header.sentences = [{
+header.sentences = [
+  {
     country: "poland",
     year: "51 LAT (1967-2018)",
     sentence: "GDAŃSKIEJ INFORMATYKI EKONOMICZNEJ"
@@ -101,7 +101,8 @@ header.sentences = [{
   },
   {
     country: "israel",
-    year: "יובל הזהב 51 שנים (1967 - 2018) של אינפורמטיקה עסקית באוניברסיטת גדנסק, פולין",
+    year:
+      "יובל הזהב 51 שנים (1967 - 2018) של אינפורמטיקה עסקית באוניברסיטת גדנסק, פולין",
     sentence: ""
   },
   {
@@ -132,7 +133,8 @@ header.sentences = [{
   {
     country: "romania",
     year: "51 DE ANI (1967-2018)",
-    sentence: "A SPECIALIZARII INFORMATICA ECONOMICA LA UNIVERSITATEA DIN GDANSK"
+    sentence:
+      "A SPECIALIZARII INFORMATICA ECONOMICA LA UNIVERSITATEA DIN GDANSK"
   },
   {
     country: "romania",

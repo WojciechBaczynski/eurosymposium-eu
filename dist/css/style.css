@@ -6,52 +6,54 @@
 * #01579b light-blue darken-4
 * #fafafa grey lighten-5
 * #bdbdbd grey lighten-1
+* #546e7a blue-grey darken-1
 */
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /** 
 * HEADER 
 */
 .welcome-wrapper {
-    height: 100vh;
-    width: 100vw;
-    background-color: #F7F7F7;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7f7f7;
 }
 
 .welcome-wrapper--carusel {
-    height: 45vh;
+  height: 45vh;
 }
 
 .welcome-wrapper--main-text {
-    height: 150px;
-    background: #666;
-    margin: 0 30px;
+  height: 150px;
+  background: #666;
+  margin: 0 30px;
 }
 
-.welcome-wrapper--sentence {}
+.welcome-wrapper--sentence {
+}
 
 .welcome-wrapper--sentence-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
 }
 
 .welcome-wrapper--sentence-content-year,
 .welcome-wrapper--sentence-content-text {
-    font-size: 1.8em;
-    color: #000;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
+  font-size: 1.8em;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 .welcome-wrapper--sentence-flags-item {
-    display: inline-block;
+  display: inline-block;
 }
 
 /** 
@@ -70,11 +72,20 @@ body {
 * KEYNOTE SPEECH
 */
 
+/** 
+* ORGANIZERS
+*/
 
-
-
-
-
+/**
+* DOWNLOADS
+*/
+.downloads--card-title__orange {
+  /* color: #546e7a !important; */
+  color: #000 !important;
+  font-weight: bold !important;
+  background: #ffb74d;
+  opacity: 0.7;
+}
 
 /**
 * COUNTRY SPRITE CLASSES
@@ -82,105 +93,105 @@ body {
 */
 
 .image--flag-64x38 {
-    width: 64px;
-    height: 38px;
-    background: url('../assets/sprite/flat_64_sprite.png');
-    background-size: 1536px 64px;
-    padding: 0;
+  width: 64px;
+  height: 38px;
+  background: url("../assets/img/sprite/flat_64_sprite.png");
+  background-size: 1536px 64px;
+  padding: 0;
 }
 
 .image--flag-64x38__poland {
-    background-position: -0 -13px;
+  background-position: -0 -13px;
 }
 
 .image--flag-64x38__england {
-    background-position: -64px -13px;
+  background-position: -64px -13px;
 }
 
 .image--flag-64x38__bulgaria {
-    background-position: -128px -13px;
+  background-position: -128px -13px;
 }
 
 .image--flag-64x38__china {
-    background-position: -192px -13px;
+  background-position: -192px -13px;
 }
 
 .image--flag-64x38__croatia {
-    background-position: -256px -13px;
+  background-position: -256px -13px;
 }
 
 .image--flag-64x38__czech {
-    background-position: -320px -13px;
+  background-position: -320px -13px;
 }
 
 .image--flag-64x38__netherlands {
-    background-position: -384px -13px;
+  background-position: -384px -13px;
 }
 
 .image--flag-64x38__finland {
-    background-position: -448px -13px;
+  background-position: -448px -13px;
 }
 
 .image--flag-64x38__france {
-    background-position: -512px -13px;
+  background-position: -512px -13px;
 }
 
 .image--flag-64x38__germany {
-    background-position: -576px -13px;
+  background-position: -576px -13px;
 }
 
 .image--flag-64x38__israel {
-    background-position: -640px -13px;
+  background-position: -640px -13px;
 }
 
 .image--flag-64x38__italy {
-    background-position: -704px -13px;
+  background-position: -704px -13px;
 }
 
 .image--flag-64x38__korea {
-    background-position: -768px -13px;
+  background-position: -768px -13px;
 }
 
 .image--flag-64x38__lithuania {
-    background-position: -832px -13px;
+  background-position: -832px -13px;
 }
 
 .image--flag-64x38__norway {
-    background-position: -896px -13px;
+  background-position: -896px -13px;
 }
 
 .image--flag-64x38__portugal {
-    background-position: -960px -13px;
+  background-position: -960px -13px;
 }
 
 .image--flag-64x38__romania {
-    background-position: -1024px -13px;
+  background-position: -1024px -13px;
 }
 
 .image--flag-64x38__russia {
-    background-position: -1088px -13px;
+  background-position: -1088px -13px;
 }
 
 .image--flag-64x38__slovakia {
-    background-position: -1152px -13px;
+  background-position: -1152px -13px;
 }
 
 .image--flag-64x38__slovenia {
-    background-position: -1216px -13px;
+  background-position: -1216px -13px;
 }
 
 .image--flag-64x38__spain {
-    background-position: -1280px -13px;
+  background-position: -1280px -13px;
 }
 
 .image--flag-64x38__sweden {
-    background-position: -1344px -13px;
+  background-position: -1344px -13px;
 }
 
 .image--flag-64x38__turkey {
-    background-position: -1408px -13px;
+  background-position: -1408px -13px;
 }
 
 .image--flag-64x38__ukraine {
-    background-position: -1472px -13px;
+  background-position: -1472px -13px;
 }
