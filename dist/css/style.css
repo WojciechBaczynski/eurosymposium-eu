@@ -1,4 +1,5 @@
 /* Use BEM methodology */
+/* BLOCK__ELEMENT--MODIFIER */
 
 /**
 * CONFIG
@@ -23,28 +24,27 @@ body {
   background-color: #f7f7f7;
 }
 
-.welcome-wrapper--carusel {
+.welcome-wrapper__carusel {
   height: 45vh;
 }
 
-.welcome-wrapper--main-text {
+.welcome-wrapper__main-text {
   height: 150px;
   background: #666;
   margin: 0 30px;
 }
 
-.welcome-wrapper--sentence {
-}
+.welcome-wrapper__sentence {}
 
-.welcome-wrapper--sentence-content {
+.welcome-wrapper__sentence-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 150px;
 }
 
-.welcome-wrapper--sentence-content-year,
-.welcome-wrapper--sentence-content-text {
+.welcome-wrapper__sentence-content-year,
+.welcome-wrapper__sentence-content-text {
   font-size: 1.8em;
   color: #000;
   font-weight: bold;
@@ -52,7 +52,7 @@ body {
   justify-content: center;
 }
 
-.welcome-wrapper--sentence-flags-item {
+.welcome-wrapper__sentence-flags-item {
   display: inline-block;
 }
 
@@ -92,7 +92,7 @@ body {
 * (Leave it at the bottom of the file)
 */
 
-.image--flag-64x38 {
+.image__flag-64x38 {
   width: 64px;
   height: 38px;
   background: url("../assets/img/sprite/flat_64_sprite.png");
@@ -100,98 +100,98 @@ body {
   padding: 0;
 }
 
-.image--flag-64x38__poland {
+.image__flag-64x38--poland {
   background-position: -0 -13px;
 }
 
-.image--flag-64x38__england {
+.image__flag-64x38--england {
   background-position: -64px -13px;
 }
 
-.image--flag-64x38__bulgaria {
+.image__flag-64x38--bulgaria {
   background-position: -128px -13px;
 }
 
-.image--flag-64x38__china {
+.image__flag-64x38--china {
   background-position: -192px -13px;
 }
 
-.image--flag-64x38__croatia {
+.image__flag-64x38--croatia {
   background-position: -256px -13px;
 }
 
-.image--flag-64x38__czech {
+.image__flag-64x38--czech {
   background-position: -320px -13px;
 }
 
-.image--flag-64x38__netherlands {
+.image__flag-64x38--netherlands {
   background-position: -384px -13px;
 }
 
-.image--flag-64x38__finland {
+.image__flag-64x38--finland {
   background-position: -448px -13px;
 }
 
-.image--flag-64x38__france {
+.image__flag-64x38--france {
   background-position: -512px -13px;
 }
 
-.image--flag-64x38__germany {
+.image__flag-64x38--germany {
   background-position: -576px -13px;
 }
 
-.image--flag-64x38__israel {
+.image__flag-64x38--israel {
   background-position: -640px -13px;
 }
 
-.image--flag-64x38__italy {
+.image__flag-64x38--italy {
   background-position: -704px -13px;
 }
 
-.image--flag-64x38__korea {
+.image__flag-64x38--korea {
   background-position: -768px -13px;
 }
 
-.image--flag-64x38__lithuania {
+.image__flag-64x38--lithuania {
   background-position: -832px -13px;
 }
 
-.image--flag-64x38__norway {
+.image__flag-64x38--norway {
   background-position: -896px -13px;
 }
 
-.image--flag-64x38__portugal {
+.image__flag-64x38--portugal {
   background-position: -960px -13px;
 }
 
-.image--flag-64x38__romania {
+.image__flag-64x38--romania {
   background-position: -1024px -13px;
 }
 
-.image--flag-64x38__russia {
+.image__flag-64x38--russia {
   background-position: -1088px -13px;
 }
 
-.image--flag-64x38__slovakia {
+.image__flag-64x38--slovakia {
   background-position: -1152px -13px;
 }
 
-.image--flag-64x38__slovenia {
+.image__flag-64x38--slovenia {
   background-position: -1216px -13px;
 }
 
-.image--flag-64x38__spain {
+.image__flag-64x38--spain {
   background-position: -1280px -13px;
 }
 
-.image--flag-64x38__sweden {
+.image__flag-64x38--sweden {
   background-position: -1344px -13px;
 }
 
-.image--flag-64x38__turkey {
+.image__flag-64x38--turkey {
   background-position: -1408px -13px;
 }
 
-.image--flag-64x38__ukraine {
+.image__flag-64x38--ukraine {
   background-position: -1472px -13px;
 }
