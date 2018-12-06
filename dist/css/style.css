@@ -8,6 +8,7 @@
 * #fafafa grey lighten-5
 * #bdbdbd grey lighten-1
 * #546e7a blue-grey darken-1
+* #fff3e0 orange lighten-5
 */
 
 body {
@@ -86,6 +87,16 @@ body {
   background: #ffb74d;
   opacity: 0.7;
 }
+
+/**
+* Materialize override 
+*/
+
+table.striped>tbody>tr:nth-child(odd) {
+  /* background-color: rgba(242, 242, 242, 0.5); */
+  background-color: #fff3e0;
+}
+
 
 /**
 * COUNTRY SPRITE CLASSES
