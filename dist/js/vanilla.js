@@ -75,9 +75,36 @@ releventTopics.initReleventTopicView = function () {
 
     table.appendChild(tr);
   }
-
-
 };
+
+// ------------------- VENUE -------------------
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, options);
+});
+
+// ------------------- CONTACT -------------------
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {
+    lat: -25.344,
+    lng: 131.036
+  };
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+    document.querySelector('.contact__map'), {
+      zoom: 4,
+      center: uluru
+    });
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
 
 
 // Long arrays and HTML templates leave at the bottom of the file
