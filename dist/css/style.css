@@ -77,6 +77,16 @@ body {
 * ORGANIZERS
 */
 
+/** 
+* ORGANIZING COMMITTEE
+*/
+.organizing-committee--a__color{
+  color: #01579b;
+}
+
+.organizing-committee--a__color:hover{
+  text-decoration: underline;
+}
 /**
 * DOWNLOADS
 */
