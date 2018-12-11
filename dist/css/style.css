@@ -16,6 +16,13 @@ body {
   padding: 0;
 }
 
+a{
+  color: #01579b;
+}
+
+a:hover{
+  text-decoration: underline;
+}
 /** 
 * HEADER 
 */
@@ -77,16 +84,6 @@ body {
 * ORGANIZERS
 */
 
-/** 
-* ORGANIZING COMMITTEE
-*/
-.organizing-committee--a__color{
-  color: #01579b;
-}
-
-.organizing-committee--a__color:hover{
-  text-decoration: underline;
-}
 /**
 * DOWNLOADS
 */
