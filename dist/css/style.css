@@ -98,6 +98,13 @@ a:hover{
 /** 
 * CONTACT
 */
+.previous-keynote-speakers__speaker--move-right{
+  padding-left: 10%;
+}
+
+/** 
+* CONTACT
+*/
 
 .contact__map {
   width: 100%;
