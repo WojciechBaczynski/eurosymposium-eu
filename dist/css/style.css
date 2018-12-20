@@ -219,3 +219,17 @@ table.striped>tbody>tr:nth-child(odd) {
 .image__flag-64x38--ukraine {
   background-position: -1472px -13px;
 }
+
+/* ---------------- REGISTRATION ---------------- */
+
+.registration__form--d-flex {
+  display: flex;
+}
+
+.registration__form--direct-col {
+  flex-direction: column;
+}
+
+.registration__form--just-con-center {
+  justify-content: flex-end;
+}
