@@ -12,56 +12,58 @@
 */
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-a{
-  color: #01579b;
+a {
+    color: #01579b;
 }
 
-a:hover{
-  text-decoration: underline;
+a:hover {
+    text-decoration: underline;
 }
-/** 
+
+/**
 * HEADER 
 */
 .welcome-wrapper {
-  height: 100vh;
-  width: 100vw;
-  background-color: #f7f7f7;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7f7f7;
 }
 
 .welcome-wrapper__carusel {
-  height: 45vh;
+    height: 45vh;
 }
 
 .welcome-wrapper__main-text {
-  height: 150px;
-  background: #666;
-  margin: 0 30px;
+    height: 150px;
+    background: #666;
+    margin: 0 30px;
 }
 
-.welcome-wrapper__sentence {}
+.welcome-wrapper__sentence {
+}
 
 .welcome-wrapper__sentence-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
 }
 
 .welcome-wrapper__sentence-content-year,
 .welcome-wrapper__sentence-content-text {
-  font-size: 1.8em;
-  color: #000;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
+    font-size: 1.8em;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
 .welcome-wrapper__sentence-flags-item {
-  display: inline-block;
+    display: inline-block;
 }
 
 /** 
@@ -80,26 +82,94 @@ a:hover{
 * KEYNOTE SPEECH
 */
 
+.keynote-speech__container {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/**
+* RELEVANT TOPICS
+*/
+
+@media all and(max-width: 340px) {
+    .container--relevant-topics {
+        margin-left: 0px;
+    }
+}
+
+
+
+
 /** 
 * ORGANIZERS
 */
+
+.container--organizers .collapsible-header {
+    min-height: 170px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 32px;
+
+    display: flex;
+    align-items: center;
+}
+
+.container--organizers .collapsible-body {
+    color: #fff;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.container--organizers .collapsible-footer {
+    width: 100%;
+    /*border-top: 1px solid #ccc;*/
+    border-top: 1px solid rgba(160,160,160,0.2);
+    margin-top: 28px;
+    padding-top: 28px;
+}
+
+.container--organizers .collapsible-footer a {
+    color: #ffab40;
+    text-decoration: none;
+}
+
+
+
+/*.collapsible-header--plais {*/
+    /*background: url('../assets/img/plais_logo.png') center ;*/
+    /*background-size: cover;*/
+/*}*/
+
+/*.collapsible-header--ug {*/
+    /*background: url('../assets/img/ug_management.jpg') center ;*/
+    /*background-size: cover;*/
+/*}*/
+
+/*.collapsible-header--sigsand {*/
+    /*background: #fff9aa;*/
+    /*background-size: cover;*/
+/*}*/
 
 /**
 * DOWNLOADS
 */
 .downloads--card-title__orange {
-  /* color: #546e7a !important; */
-  color: #000 !important;
-  font-weight: bold !important;
-  background: #ffb74d;
-  opacity: 0.7;
+    /* color: #546e7a !important; */
+    color: #000 !important;
+    font-weight: bold !important;
+    background: #ffb74d;
+    opacity: 0.7;
 }
 
 /** 
 * CONTACT
 */
-.previous-keynote-speakers__speaker--move-right{
-  padding-left: 10%;
+.previous-keynote-speakers__speaker--move-right {
+    padding-left: 10%;
 }
 
 /** 
@@ -107,22 +177,22 @@ a:hover{
 */
 
 .contact__map {
-  width: 100%;
-  height: 260px;
-  background: #666;
+    width: 100%;
+    height: 260px;
+    background: #666;
 }
 
 .contact__title--mt-0 {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 /**
 * Materialize override 
 */
 
-table.striped>tbody>tr:nth-child(odd) {
-  /* background-color: rgba(242, 242, 242, 0.5); */
-  background-color: #fff3e0;
+table.striped > tbody > tr:nth-child(odd) {
+    /* background-color: rgba(242, 242, 242, 0.5); */
+    background-color: #fff3e0;
 }
 
 /**
@@ -131,119 +201,119 @@ table.striped>tbody>tr:nth-child(odd) {
 */
 
 .image__flag-64x38 {
-  width: 64px;
-  height: 38px;
-  background: url("../assets/img/sprite/flat_64_sprite.png");
-  background-size: 1536px 64px;
-  padding: 0;
+    width: 64px;
+    height: 38px;
+    background: url("../assets/img/sprite/flat_64_sprite.png");
+    background-size: 1536px 64px;
+    padding: 0;
 }
 
 .image__flag-64x38--poland {
-  background-position: -0 -13px;
+    background-position: -0 -13px;
 }
 
 .image__flag-64x38--england {
-  background-position: -64px -13px;
+    background-position: -64px -13px;
 }
 
 .image__flag-64x38--bulgaria {
-  background-position: -128px -13px;
+    background-position: -128px -13px;
 }
 
 .image__flag-64x38--china {
-  background-position: -192px -13px;
+    background-position: -192px -13px;
 }
 
 .image__flag-64x38--croatia {
-  background-position: -256px -13px;
+    background-position: -256px -13px;
 }
 
 .image__flag-64x38--czech {
-  background-position: -320px -13px;
+    background-position: -320px -13px;
 }
 
 .image__flag-64x38--netherlands {
-  background-position: -384px -13px;
+    background-position: -384px -13px;
 }
 
 .image__flag-64x38--finland {
-  background-position: -448px -13px;
+    background-position: -448px -13px;
 }
 
 .image__flag-64x38--france {
-  background-position: -512px -13px;
+    background-position: -512px -13px;
 }
 
 .image__flag-64x38--germany {
-  background-position: -576px -13px;
+    background-position: -576px -13px;
 }
 
 .image__flag-64x38--israel {
-  background-position: -640px -13px;
+    background-position: -640px -13px;
 }
 
 .image__flag-64x38--italy {
-  background-position: -704px -13px;
+    background-position: -704px -13px;
 }
 
 .image__flag-64x38--korea {
-  background-position: -768px -13px;
+    background-position: -768px -13px;
 }
 
 .image__flag-64x38--lithuania {
-  background-position: -832px -13px;
+    background-position: -832px -13px;
 }
 
 .image__flag-64x38--norway {
-  background-position: -896px -13px;
+    background-position: -896px -13px;
 }
 
 .image__flag-64x38--portugal {
-  background-position: -960px -13px;
+    background-position: -960px -13px;
 }
 
 .image__flag-64x38--romania {
-  background-position: -1024px -13px;
+    background-position: -1024px -13px;
 }
 
 .image__flag-64x38--russia {
-  background-position: -1088px -13px;
+    background-position: -1088px -13px;
 }
 
 .image__flag-64x38--slovakia {
-  background-position: -1152px -13px;
+    background-position: -1152px -13px;
 }
 
 .image__flag-64x38--slovenia {
-  background-position: -1216px -13px;
+    background-position: -1216px -13px;
 }
 
 .image__flag-64x38--spain {
-  background-position: -1280px -13px;
+    background-position: -1280px -13px;
 }
 
 .image__flag-64x38--sweden {
-  background-position: -1344px -13px;
+    background-position: -1344px -13px;
 }
 
 .image__flag-64x38--turkey {
-  background-position: -1408px -13px;
+    background-position: -1408px -13px;
 }
 
 .image__flag-64x38--ukraine {
-  background-position: -1472px -13px;
+    background-position: -1472px -13px;
 }
 
 /* ---------------- REGISTRATION ---------------- */
 
 .registration__form--d-flex {
-  display: flex;
+    display: flex;
 }
 
 .registration__form--direct-col {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .registration__form--just-con-center {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
