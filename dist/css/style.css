@@ -79,6 +79,14 @@ a:hover {
 */
 
 /** 
+* ACCOMODATION
+*/
+
+.accomodation__img--map-size{
+    max-width: 100%
+}
+
+/** 
 * KEYNOTE SPEECH
 */
 
