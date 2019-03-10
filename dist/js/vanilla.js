@@ -107,12 +107,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // ------------------- CONTACT -------------------
 
 // Initialize and add the map
-function initMap() {
-    var uluru = {lat: 54.44509067666397, lng: 18.553553223609924};
-    var map = new google.maps.Map(
-        document.querySelector('.contact__map'), {zoom: 16, center: uluru});
-    var marker = new google.maps.Marker({position: uluru, map: map});
-}
+// function initMap() {
+//     var uluru = {lat: 54.44509067666397, lng: 18.553553223609924};
+//     var map = new google.maps.Map(
+//         document.querySelector('.contact__map'), {zoom: 16, center: uluru});
+//     var marker = new google.maps.Marker({position: uluru, map: map});
+// }
 
 
 // Long arrays and HTML templates leave at the bottom of the file
