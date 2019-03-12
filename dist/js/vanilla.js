@@ -1,4 +1,5 @@
 header = {};
+header.images = [];
 header.sentences = [];
 overview = {};
 keynoteSpeach = {};
@@ -16,33 +17,41 @@ header.initHeaderView = function () {
   header.getSentenceContent();
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems, {
+    enterDelay: "200"
+  });
+});
+
 header.setSentence = function (year, text) {
   var sentenceYear = document.querySelector(
-    ".welcome-wrapper--sentence-content-year"
+    ".welcome-wrapper__sentence-content-year"
   );
   var sentenceText = document.querySelector(
-    ".welcome-wrapper--sentence-content-text"
+    ".welcome-wrapper__sentence-content-text"
   );
 
-  // sentenceYear.textContent = year;
-  // sentenceText.textContent = text;
+  sentenceYear.textContent = year;
+  sentenceText.textContent = text;
 };
 
 header.getSentenceContent = function () {
   var sentences = header.sentences;
   var arrYear;
   var arrText;
+  var number = 0;
 
-  sentences.forEach(function (sentence) {
-    arrYear = sentence.year;
-    arrText = sentence.sentence;
+  setInterval(function() {
+    document.querySelector(".image__flag-64x38.image__flag-64x38--".concat(sentences[number].country)).style.opacity = "1.0";
+    arrYear = sentences[number].year;
+    arrText = sentences[number].sentence;
     header.setSentence(arrYear, arrText);
-    setTimeout;
-  });
-
-  // arrYear = "sentences[1].year";
-  // arrText = "sentences[1].sentence";
-  // header.setSentence(arrYear, arrText);
+    number++;
+    if(number==sentences.length) {
+      number=0;
+    }
+  }, 3500);
 };
 
 // ------------------- OVERVIEW -------------------
@@ -108,6 +117,12 @@ function initMap() {
 
 
 // Long arrays and HTML templates leave at the bottom of the file
+header.images = ["assets/img/header_carousel/1.png", 
+                  "assets/img/header_carousel/2.png", 
+                  "assets/img/header_carousel/3.png",
+                  "assets/img/header_carousel/4.jpg",
+                  "assets/img/header_carousel/5.png"];
+
 header.sentences = [{
     country: "poland",
     year: "51 LAT (1967-2018)",
@@ -119,7 +134,7 @@ header.sentences = [{
     sentence: "BUSINESS INFORMATICS AT UNIVERSITY OF GDANSK"
   },
   {
-    country: "bulgari",
+    country: "bulgaria",
     year: "51 ГОДИНИ (1967-2018)",
     sentence: "НА БИЗНЕС ИНФОРМАТИКАВ УНИВЕРСИТЕТА НА ГДАНСК"
   },
@@ -194,7 +209,7 @@ header.sentences = [{
     sentence: "A SPECIALIZARII INFORMATICA ECONOMICA LA UNIVERSITATEA DIN GDANSK"
   },
   {
-    country: "romania",
+    country: "russia",
     year: "51 ЛЕТ (1967-2018)",
     sentence: "БИЗНЕС-ИНФОРМАТИКА УНИВЕРСИТЕТ ГДАНЬСКА, ПОЛЬША"
   },
