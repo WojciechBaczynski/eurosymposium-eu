@@ -9,6 +9,7 @@
 * #bdbdbd grey lighten-1
 * #546e7a blue-grey darken-1
 * #fff3e0 orange lighten-5
+* #CFB53B GOLD
 */
 
 body {
@@ -34,36 +35,51 @@ a:hover {
 }
 
 .welcome-wrapper__carusel {
-    height: 45vh;
 }
 
 .welcome-wrapper__main-text {
-    height: 150px;
-    background: #666;
-    margin: 0 30px;
+  margin: 0 30px;
+  color: #CFB53B;
+  text-align: center;
+}
+
+.material-tooltip {
+  color: #CFB53B;
+  background-color: #546e7a;
 }
 
 .welcome-wrapper__sentence {
+  margin: 0 30px;
+  text-align: center;
 }
 
 .welcome-wrapper__sentence-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  margin-bottom: 5vh;
 }
 
 .welcome-wrapper__sentence-content-year,
 .welcome-wrapper__sentence-content-text {
-    font-size: 1.8em;
-    color: #000;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
+  font-size: 1.6em;
+  color: #CFB53B;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-wrapper__sentence-flags {
 }
 
 .welcome-wrapper__sentence-flags-item {
-    display: inline-block;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.welcome-wrapper__sentence-flags-item:hover {
+  opacity: 1.0;
 }
 
 /** 
