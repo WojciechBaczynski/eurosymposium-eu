@@ -7,14 +7,14 @@ releventTopics = {};
 
 // Main InitView Function
 window.onload = function () {
-  // Pass here all functions which should start at the beginning
-  header.initHeaderView();
-  releventTopics.initReleventTopicView();
+    // Pass here all functions which should start at the beginning
+    header.initHeaderView();
+    releventTopics.initReleventTopicView();
 };
 
 // ------------------- HEADER -------------------
 header.initHeaderView = function () {
-  header.getSentenceContent();
+    header.getSentenceContent();
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,62 +58,70 @@ header.getSentenceContent = function () {
 
 // ------------------- RELEVANT TOPICS -------------------
 releventTopics.initReleventTopicView = function () {
-  var table = document.querySelector('[data-function="topics-wrapper"]');
+    var table = document.querySelector('[data-function="topics-wrapper"]');
 
-  var topicArr = releventTopics.topicArr;
-  var index = 0;
+    var topicArr = releventTopics.topicArr;
+    var index = 0;
 
 
-  while (index < topicArr.length) {
-    var tr = document.createElement('tr');
+    while (index < topicArr.length) {
+        var tr = document.createElement('tr');
 
-    for (var i = 1; i < 4; i++) {
-      var td = document.createElement('td');
-      var cell = document.createTextNode(topicArr[index]);
-      console.log(cell);
-      if (cell == "undefined") {
-        td.appendChild("");
-      } else {
-        td.appendChild(cell);
-      }
+        for (var i = 1; i < 4; i++) {
+            var td = document.createElement('td');
+            var cell = document.createTextNode(topicArr[index]);
+            console.log(typeof cell.toString().valueOf());
 
-      td.appendChild(cell)
-      tr.appendChild(td);
-      index++;
+            if (cell.toString().valueOf() === "undefined") {
+                console.log('--------------------');
+                td.appendChild("");
+            } else {
+                td.appendChild(cell);
+            }
+
+            td.appendChild(cell);
+            tr.appendChild(td);
+            index++;
+        }
+
+
+        table.appendChild(tr);
     }
-
-    table.appendChild(tr);
-  }
 };
+// ------------------- ORGANIZERS -------------------
+
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+});
+
 
 // ------------------- VENUE -------------------
 
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.carousel');
-  var instances = M.Carousel.init(elems, options);
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     console.log('addEventListener ready');
+//     let options = {duration: 200, dist: 10, numVisible: 2, fullWidth: true, indicators: true};
+//
+//     var elems = document.querySelectorAll('.carousel');
+//     var instances = M.Carousel.init(elems, options);
+//     var instance = M.Carousel.getInstance(elem);
+//
+//     setInterval(function () {
+//         instance.next();
+//         console.log('setInterval ready');
+//     }, 2000);
+// });
+
 
 // ------------------- CONTACT -------------------
 
 // Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {
-    lat: -25.344,
-    lng: 131.036
-  };
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-    document.querySelector('.contact__map'), {
-      zoom: 4,
-      center: uluru
-    });
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-}
+// function initMap() {
+//     var uluru = {lat: 54.44509067666397, lng: 18.553553223609924};
+//     var map = new google.maps.Map(
+//         document.querySelector('.contact__map'), {zoom: 16, center: uluru});
+//     var marker = new google.maps.Marker({position: uluru, map: map});
+// }
 
 
 // Long arrays and HTML templates leave at the bottom of the file
@@ -246,50 +254,50 @@ header.sentences = [{
 ];
 
 releventTopics.topicArr = [
-  "Agile Methods",
-  "Big Data, Business Analytics",
-  "Blockchain Technology and Applications",
-  "Business Informatics",
-  "Business Process Modeling",
-  "Case Studies in SAND",
-  "Cloud Computing",
-  "Cognitive Issues in SAND",
-  "Conceptual Modeling",
-  "Crowdsourcing and Crowdfunding Models",
-  "Design Theory",
-  "Digital Services and Social Media",
-  "Enterprise Architecture",
-  "Enterprise Social Networks",
-  "ERP and CRM Systems",
-  "Ethical and Human Aspects of IS Development",
-  "Ethnographic, Anthropological, Action and Entrepreneurial Research",
-  "Evolution of IS Discipline",
-  "Human-Computer Interaction",
-  "Industry 4.0",
-  "Information Systems Development: Methodologies, Methods, Techniques and Tools",
-  "Internet of Things",
-  "Machine Learning",
-  "Model-Driven Architecture",
-  "New Paradigms, Formalisms, Approaches, Frameworks and Challenges in IS & SAND",
-  "Ontological Foundations and Intelligent Systems of SAND",
-  "Open Source Software (OSS) Solutions",
-  "Project Management",
-  "Quality Assurance in Systems Development",
-  "Requirements and Software Engineering",
-  "Research Methodologies in SAND",
-  "Role of SAND in Mobile and Internet Applications Development",
-  "SAND Education: Curricula, E-learning, MOOCs and Teaching Cases",
-  "SCRUM Approach",
-  "Security and Privacy Issues in IS & SAND",
-  "Service Oriented Systems Development",
-  "Social Networking Services",
-  "Socio-Technical Approaches to System Development, Psychological and Behavioural Descriptions",
-  "Software Intensive Systems and Services",
-  "Strategic Information Systems in Enterprises",
-  "Supply Chain Management Aspects",
-  "Systems Analysts and Designers Professions",
-  "Teams and Teamwork in IS & SAND",
-  "UML, SysML, BPMN",
-  "User Experience (UX) Design",
-  "Workflow Management"
+    "Agile Methods",
+    "Big Data, Business Analytics",
+    "Blockchain Technology and Applications",
+    "Business Informatics",
+    "Business Process Modeling",
+    "Case Studies in SAND",
+    "Cloud Computing",
+    "Cognitive Issues in SAND",
+    "Conceptual Modeling",
+    "Crowdsourcing and Crowdfunding Models",
+    "Design Theory",
+    "Digital Services and Social Media",
+    "Enterprise Architecture",
+    "Enterprise Social Networks",
+    "ERP and CRM Systems",
+    "Ethical and Human Aspects of IS Development",
+    "Ethnographic, Anthropological, Action and Entrepreneurial Research",
+    "Evolution of IS Discipline",
+    "Human-Computer Interaction",
+    "Industry 4.0",
+    "Information Systems Development: Methodologies, Methods, Techniques and Tools",
+    "Internet of Things",
+    "Machine Learning",
+    "Model-Driven Architecture",
+    "New Paradigms, Formalisms, Approaches, Frameworks and Challenges in IS & SAND",
+    "Ontological Foundations and Intelligent Systems of SAND",
+    "Open Source Software (OSS) Solutions",
+    "Project Management",
+    "Quality Assurance in Systems Development",
+    "Requirements and Software Engineering",
+    "Research Methodologies in SAND",
+    "Role of SAND in Mobile and Internet Applications Development",
+    "SAND Education: Curricula, E-learning, MOOCs and Teaching Cases",
+    "SCRUM Approach",
+    "Security and Privacy Issues in IS & SAND",
+    "Service Oriented Systems Development",
+    "Social Networking Services",
+    "Socio-Technical Approaches to System Development, Psychological and Behavioural Descriptions",
+    "Software Intensive Systems and Services",
+    "Strategic Information Systems in Enterprises",
+    "Supply Chain Management Aspects",
+    "Systems Analysts and Designers Professions",
+    "Teams and Teamwork in IS & SAND",
+    "UML, SysML, BPMN",
+    "User Experience (UX) Design",
+    "Workflow Management"
 ];
