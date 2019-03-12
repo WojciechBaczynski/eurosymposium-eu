@@ -189,6 +189,10 @@ a:hover {
     opacity: 0.7;
 }
 
+.fees__fee--move-right {
+    padding-left: 10%;
+}
+
 /** 
 * CONTACT
 */
