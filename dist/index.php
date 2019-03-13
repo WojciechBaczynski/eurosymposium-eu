@@ -15,6 +15,6 @@ switch ($request) {
         require __DIR__ . '/views/registration.php';
         break;
     default:
-        require __DIR__ . '/views/index.html';
+        require __DIR__ . '/views/error.html';
         break;
 }

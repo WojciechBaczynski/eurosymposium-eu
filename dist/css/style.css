@@ -337,7 +337,7 @@ table.striped > tbody > tr:nth-child(odd) {
     background-position: -1472px -13px;
 }
 
-/* ---------------- REGISTRATION ---------------- */
+/* ---------------- REGISTRATION - PAGE ---------------- */
 
 .registration__form--d-flex {
     display: flex;
@@ -349,4 +349,50 @@ table.striped > tbody > tr:nth-child(odd) {
 
 .registration__form--just-con-center {
     justify-content: flex-end;
+}
+
+/* ---------------- 404 ERROR - PAGE ---------------- */
+
+.error-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: tomato;
+    color: #fff;
+    font-size: 4em;
+    font-weight: 700;
+
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.error__button {
+    border: 5px solid #fff;
+    color: #fff;
+    text-decoration: none !important;
+    margin-top: 30px;
+    padding: 7px 5px;
+    font-size: 0.8em;
+}
+
+.error__button:hover {
+    background: #fff;
+    color: tomato;
+}
+
+@media all and (min-width: 769px){
+    .error-box {
+        font-size: 3em;
+    }
+
+    .error__button {
+        font-size: 0.7em;
+    }
 }
