@@ -30,21 +30,78 @@ a:hover {
 */
 .welcome-wrapper {
     height: 100vh;
-    width: 100vw;
+    width: 98vw;
     background-color: #f7f7f7;
+    margin: auto;
 }
 
 .welcome-wrapper__carusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-wrapper__carousel-slider {
+    width: 55vw;
+}
+
+.welcome-wrapper__carousel-slider-prev {
+    width: 15vw;
+    opacity: 0.5;
+}
+
+.welcome-wrapper__carousel-slider-prev:hover {
+    opacity: 1.0;
+}
+
+.welcome-wrapper__carousel-slider-next {
+    width: 15vw;
+    opacity: 0.5;
+}
+
+.welcome-wrapper__carousel-slider-next:hover {
+    opacity: 1.0;
+}
+
+.welcome-wrapper__indicators {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90px;
+    height: 20px;
+    border-radius: 12px;
+    opacity: 0.2;
+}
+
+.welcome-wrapper__indicators:hover {
+    opacity: 1.0;
+}
+
+.welcome-wrapper__indicators-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #f7f7f7;
+    border: 1px solid #546e7a;
+    border-radius: 12px;
+}
+
+.welcome-wrapper__indicators-indicator:hover {
+    background-color: #546e7a;
+}
+
+.activeIndicator {
+    background-color: #546e7a;
 }
 
 .welcome-wrapper__main-text {
   margin: 0 30px;
-  color: #CFB53B;
+  /* color: #CFB53B; */
   text-align: center;
 }
 
 .material-tooltip {
-  color: #CFB53B;
+  /* color: #CFB53B; */
   background-color: #546e7a;
 }
 
@@ -64,7 +121,7 @@ a:hover {
 .welcome-wrapper__sentence-content-year,
 .welcome-wrapper__sentence-content-text {
   font-size: 1.5em;
-  color: #CFB53B;
+  /* color: #CFB53B; */
   font-weight: bold;
   display: flex;
   justify-content: center;
