@@ -104,12 +104,17 @@ a:hover {
     font-family: inherit;
 }
 
+.navbar__nav a:hover {
+    text-decoration: none;
+}
+
 .navbar__dropdown {
   overflow: hidden;
   padding: 0;
 }
 
-.navbar__dropdown .dropbtn {
+.navbar__dropdown .dropbtn,
+.navbar__nav a {
   font-size: 16px; 
   border: none;
   outline: none;
