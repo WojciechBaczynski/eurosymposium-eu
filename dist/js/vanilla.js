@@ -5,6 +5,9 @@ overview = {};
 keynoteSpeach = {};
 releventTopics = {};
 
+var numberCountry = 0;
+var countriesInterval;
+
 // Main InitView Function
 window.onload = function () {
     // Pass here all functions which should start at the beginning
@@ -17,6 +20,26 @@ header.initHeaderView = function () {
     header.getSentenceContent();
 };
 
+header.setCarousel = function (img) {
+  var mainImage = document.querySelector(
+      ".welcome-wrapper__carousel-slider"
+  );
+  mainImage.src = img;
+};
+
+header.getCarouselContent = function () {
+  var images = header.images;
+
+  carouselInterval = setInterval(function () {
+      image = images[numberCarousel];
+      header.setCarousel(image);
+      numberCarousel++;
+      if (numberCarousel == images.length) {
+          numberCarousel = 0;
+      }
+  }, 3500);
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.tooltipped');
   var instances = M.Tooltip.init(elems, {
@@ -24,12 +47,46 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+$(document).ready(function () {
+  $(".image__flag-64x38").click(function () {
+      clearInterval(countriesInterval);
+      const flags = document.querySelectorAll(".image__flag-64x38");
+      var clickedCountry = $(this).attr("class");
+      var sentences = header.sentences;
+      var arrYear;
+      var arrText;
+      for (i = 0; i < flags.length; i++) {
+          var sentenceCountry = header.sentences[i].country;
+          flags[i].addEventListener("click", function () {
+              var previousFlagParent = document.querySelectorAll(".active");
+              previousFlagParent[0].className = previousFlagParent[0].className.replace(" active", "");
+              $(this).parent().addClass(" active");
+          });
+          if (clickedCountry.includes(sentenceCountry)) {
+            numberCountry = i;
+            countriesInterval = setInterval(function () {
+              arrYear = sentences[numberCountry].year;
+              arrText = sentences[numberCountry].sentence;
+              header.setSentence(arrYear, arrText);
+              var currentParent = document.querySelectorAll(".active");
+              currentParent[0].className = currentParent[0].className.replace(" active", "");
+              $(flags[numberCountry]).parent().addClass(" active");
+              numberCountry++;
+              if (numberCountry == sentences.length) {
+                  numberCountry = 0;
+              }
+          }, 3500);
+          };
+      };
+  });
+});
+
 header.setSentence = function (year, text) {
   var sentenceYear = document.querySelector(
-    ".welcome-wrapper__sentence-content-year"
+      ".welcome-wrapper__sentence-content-year"
   );
   var sentenceText = document.querySelector(
-    ".welcome-wrapper__sentence-content-text"
+      ".welcome-wrapper__sentence-content-text"
   );
 
   sentenceYear.textContent = year;
@@ -40,17 +97,20 @@ header.getSentenceContent = function () {
   var sentences = header.sentences;
   var arrYear;
   var arrText;
-  var number = 0;
+  var flags = document.querySelectorAll(".image__flag-64x38");
 
-  setInterval(function() {
-    document.querySelector(".image__flag-64x38.image__flag-64x38--".concat(sentences[number].country)).style.opacity = "1.0";
-    arrYear = sentences[number].year;
-    arrText = sentences[number].sentence;
-    header.setSentence(arrYear, arrText);
-    number++;
-    if(number==sentences.length) {
-      number=0;
-    }
+
+  countriesInterval = setInterval(function () {
+      arrYear = sentences[numberCountry].year;
+      arrText = sentences[numberCountry].sentence;
+      header.setSentence(arrYear, arrText);
+      var currentParent = document.querySelectorAll(".active");
+      currentParent[0].className = currentParent[0].className.replace(" active", "");
+      $(flags[numberCountry]).parent().addClass(" active");
+      numberCountry++;
+      if (numberCountry == sentences.length) {
+          numberCountry = 0;
+      }
   }, 3500);
 };
 
