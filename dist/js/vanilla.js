@@ -23,6 +23,19 @@ header.initHeaderView = function () {
     header.getCarouselContent();
 };
 
+M.toast({html: 'SCROLL DOWN', classes: "rounded", displayLength: 30000});
+
+$(document).ready(function () {
+  $(".toast").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#Overview").offset().top
+  }, 500);
+  var toastElement = document.querySelector('.toast');
+  var toastInstance = M.Toast.getInstance(toastElement);
+  toastInstance.dismiss();
+  });
+});
+
 header.setCarousel = function (main, prev, next) {
   var mainImage = document.querySelector(
     ".welcome-wrapper__carousel-slider"
@@ -39,7 +52,8 @@ header.setCarousel = function (main, prev, next) {
 };
 
 header.getCarouselContent = function () {
-  var images = header.images;
+  const images = header.images;
+  const indicators = document.querySelectorAll(".welcome-wrapper__indicators-indicator");
 
   carouselInterval = setInterval(function () {
       prevNumber = numberCarousel-1;
@@ -50,10 +64,13 @@ header.getCarouselContent = function () {
       if(nextNumber>4) {
         nextNumber=0;
       }
-      mainImage = images[numberCarousel];
-      prevImage = images[prevNumber];
-      nextImage = images[nextNumber];
-      header.setCarousel(mainImage, prevImage, nextImage);
+      mainImage = images[numberCarousel].image;
+      prevImage = images[prevNumber].image;
+      nextImage = images[nextNumber].image;
+      header.setCarousel(mainImage, prevImage, nextImage);   
+      var activeIndicator = document.querySelectorAll(".activeIndicator");
+      activeIndicator[0].className = activeIndicator[0].className.replace(" activeIndicator", "");
+      $(indicators[numberCarousel]).addClass(" activeIndicator");
       numberCarousel++;
       if (numberCarousel == images.length) {
           numberCarousel = 0;
@@ -76,9 +93,9 @@ $(document).ready(function () {
     if(nextNumber>4) {
       nextNumber=0;
     }
-    mainImage = images[numberCarousel];
-    prevImage = images[prevNumber];
-    nextImage = images[nextNumber];
+    mainImage = images[numberCarousel].image;
+    prevImage = images[prevNumber].image;
+    nextImage = images[nextNumber].image;
     header.setCarousel(mainImage, prevImage, nextImage);
     if (numberCarousel == images.length) {
       numberCarousel = 0;
@@ -99,12 +116,23 @@ $(document).ready(function () {
     if(nextNumber>4) {
       nextNumber=0;
     }
-    mainImage = images[numberCarousel];
-    prevImage = images[prevNumber];
-    nextImage = images[nextNumber];
+    mainImage = images[numberCarousel].image;
+    prevImage = images[prevNumber].image;
+    nextImage = images[nextNumber].image;
     header.setCarousel(mainImage, prevImage, nextImage);
-    if (numberCarousel == images.length) {
-      numberCarousel = 0;
+  });
+
+  $(".welcome-wrapper__indicators-indicator").click(function () {
+    const indicators = document.querySelectorAll(".welcome-wrapper__indicators-indicator");
+    var clickedIndicator = $(this).attr("class");
+    for(i = 0; i < indicators.length; i++) {
+      indicators[i].addEventListener("click", function () {
+        var carouselImage = header.images[i].image;
+        console.log(header.images[0].image);
+        var activeIndicator = document.querySelectorAll(".activeIndicator");
+        activeIndicator[0].className = activeIndicator[0].className.replace(" activeIndicator", "");
+        $(this).addClass(" activeIndicator");
+      });
     }
   });
 });
@@ -169,8 +197,8 @@ header.getSentenceContent = function () {
     arrYear = sentences[numberCountry].year;
     arrText = sentences[numberCountry].sentence;
     header.setSentence(arrYear, arrText);
-    var currentParent = document.querySelectorAll(".active");
-    currentParent[0].className = currentParent[0].className.replace(" active", "");
+    var activeParent = document.querySelectorAll(".active");
+    activeParent[0].className = activeParent[0].className.replace(" active", "");
     $(flags[numberCountry]).parent().addClass(" active");
     numberCountry++;
     if (numberCountry == sentences.length) {
@@ -263,11 +291,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Long arrays and HTML templates leave at the bottom of the file
-header.images = ["../assets/img/header_carousel/1.png", 
-                  "../assets/img/header_carousel/2.png", 
-                  "../assets/img/header_carousel/3.png",
-                  "../assets/img/header_carousel/4.jpg",
-                  "../assets/img/header_carousel/5.png"];
+header.images = [{
+  id: "imagePlais",
+  image: "../assets/img/header_carousel/1.png"
+},
+{
+  id: "imageUg",
+  image: "../assets/img/header_carousel/2.png"
+},
+{
+  id: "imageErcis",
+  image: "../assets/img/header_carousel/3.png"
+},
+{
+  id: "imageGdansk",
+  image: "../assets/img/header_carousel/4.jpg"
+},
+{
+  id: "imagePan",
+  image: "../assets/img/header_carousel/5.png"
+}];
 
 header.sentences = [{
   country: "poland",
