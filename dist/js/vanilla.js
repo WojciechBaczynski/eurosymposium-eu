@@ -5,7 +5,9 @@ overview = {};
 keynoteSpeach = {};
 releventTopics = {};
 
+var numberCarousel = 0;
 var numberCountry = 0;
+var carouselInterval;
 var countriesInterval;
 
 // Main InitView Function
@@ -17,30 +19,97 @@ window.onload = function () {
 
 // ------------------- HEADER -------------------
 header.initHeaderView = function () {
-  header.getSentenceContent();
+    header.getSentenceContent();
+    header.getCarouselContent();
 };
 
-header.setCarousel = function (img) {
+header.setCarousel = function (main, prev, next) {
   var mainImage = document.querySelector(
     ".welcome-wrapper__carousel-slider"
   );
-  mainImage.src = img;
+  var prevImage = document.querySelector(
+    ".welcome-wrapper__carousel-slider-prev"
+  );
+  var nextImage = document.querySelector(
+    ".welcome-wrapper__carousel-slider-next"
+  );
+  mainImage.src = main;
+  prevImage.src = prev;
+  nextImage.src = next;
 };
 
 header.getCarouselContent = function () {
   var images = header.images;
 
   carouselInterval = setInterval(function () {
-    image = images[numberCarousel];
-    header.setCarousel(image);
+      prevNumber = numberCarousel-1;
+      if(prevNumber<0) {
+        prevNumber=4;
+      }
+      nextNumber = numberCarousel+1;
+      if(nextNumber>4) {
+        nextNumber=0;
+      }
+      mainImage = images[numberCarousel];
+      prevImage = images[prevNumber];
+      nextImage = images[nextNumber];
+      header.setCarousel(mainImage, prevImage, nextImage);
+      numberCarousel++;
+      if (numberCarousel == images.length) {
+          numberCarousel = 0;
+      }
+  }, 3500);
+};
+
+$(document).ready(function () {
+  $(".welcome-wrapper__carousel-slider-prev").click(function () {
+    var images = header.images;
+    numberCarousel--;
+    if (numberCarousel < 0) {
+      numberCarousel = images.length - 1;
+    }
+    prevNumber = numberCarousel-1;
+    if(prevNumber<0) {
+      prevNumber=4;
+    }
+    nextNumber = numberCarousel+1;
+    if(nextNumber>4) {
+      nextNumber=0;
+    }
+    mainImage = images[numberCarousel];
+    prevImage = images[prevNumber];
+    nextImage = images[nextNumber];
+    header.setCarousel(mainImage, prevImage, nextImage);
+    if (numberCarousel == images.length) {
+      numberCarousel = 0;
+    }
+  });
+
+  $(".welcome-wrapper__carousel-slider-next").click(function () {
+    var images = header.images;
     numberCarousel++;
     if (numberCarousel == images.length) {
       numberCarousel = 0;
     }
-  }, 3500);
-};
+    prevNumber = numberCarousel-1;
+    if(prevNumber<0) {
+      prevNumber=4;
+    }
+    nextNumber = numberCarousel+1;
+    if(nextNumber>4) {
+      nextNumber=0;
+    }
+    mainImage = images[numberCarousel];
+    prevImage = images[prevNumber];
+    nextImage = images[nextNumber];
+    header.setCarousel(mainImage, prevImage, nextImage);
+    if (numberCarousel == images.length) {
+      numberCarousel = 0;
+    }
+  });
+});
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.tooltipped');
   var instances = M.Tooltip.init(elems, {
     enterDelay: "200"
@@ -49,36 +118,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 $(document).ready(function () {
   $(".image__flag-64x38").click(function () {
-    clearInterval(countriesInterval);
-    const flags = document.querySelectorAll(".image__flag-64x38");
-    var clickedCountry = $(this).attr("class");
-    var sentences = header.sentences;
-    var arrYear;
-    var arrText;
-    for (i = 0; i < flags.length; i++) {
-      var sentenceCountry = header.sentences[i].country;
-      flags[i].addEventListener("click", function () {
-        var previousFlagParent = document.querySelectorAll(".active");
-        previousFlagParent[0].className = previousFlagParent[0].className.replace(" active", "");
-        $(this).parent().addClass(" active");
-      });
-      if (clickedCountry.includes(sentenceCountry)) {
-        numberCountry = i;
-        countriesInterval = setInterval(function () {
-          arrYear = sentences[numberCountry].year;
-          arrText = sentences[numberCountry].sentence;
-          header.setSentence(arrYear, arrText);
-          var currentParent = document.querySelectorAll(".active");
-          currentParent[0].className = currentParent[0].className.replace(" active", "");
-          $(flags[numberCountry]).parent().addClass(" active");
-          numberCountry++;
-          if (numberCountry == sentences.length) {
-            numberCountry = 0;
-          }
-        }, 3500);
+      const flags = document.querySelectorAll(".image__flag-64x38");
+      var clickedCountry = $(this).attr("class");
+      var sentences = header.sentences;
+      var arrYear;
+      var arrText;
+      for (i = 0; i < flags.length; i++) {
+          var sentenceCountry = header.sentences[i].country;
+          flags[i].addEventListener("click", function () {
+              var previousFlagParent = document.querySelectorAll(".active");
+              previousFlagParent[0].className = previousFlagParent[0].className.replace(" active", "");
+              $(this).parent().addClass(" active");
+          });
+          if (clickedCountry.includes(sentenceCountry)) {
+            numberCountry = i;
+              arrYear = sentences[numberCountry].year;
+              arrText = sentences[numberCountry].sentence;
+              header.setSentence(arrYear, arrText);
+              var currentParent = document.querySelectorAll(".active");
+              currentParent[0].className = currentParent[0].className.replace(" active", "");
+              $(flags[numberCountry]).parent().addClass(" active");
+              if (numberCountry == sentences.length) {
+                  numberCountry = 0;
+              }
+          };
       };
-    };
-  });
+    });
 });
 
 header.setSentence = function (year, text) {
@@ -198,11 +263,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Long arrays and HTML templates leave at the bottom of the file
-header.images = ["assets/img/header_carousel/1.png",
-  "assets/img/header_carousel/2.png",
-  "assets/img/header_carousel/3.png",
-  "assets/img/header_carousel/4.jpg",
-  "assets/img/header_carousel/5.png"];
+header.images = ["../assets/img/header_carousel/1.png", 
+                  "../assets/img/header_carousel/2.png", 
+                  "../assets/img/header_carousel/3.png",
+                  "../assets/img/header_carousel/4.jpg",
+                  "../assets/img/header_carousel/5.png"];
 
 header.sentences = [{
   country: "poland",
