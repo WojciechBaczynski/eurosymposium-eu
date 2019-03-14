@@ -100,8 +100,18 @@ a:hover {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    background-color: blue;
     font-family: inherit;
+    top: 0;
+    z-index: 1;
+}
+
+.fixed-nav .navbar__nav{
+    position: fixed;
+    width: 100%;
+}
+
+.navbar__nav a:hover {
+    text-decoration: none;
 }
 
 .navbar__dropdown {
@@ -109,7 +119,8 @@ a:hover {
   padding: 0;
 }
 
-.navbar__dropdown .dropbtn {
+.navbar__dropdown .dropbtn,
+.navbar__nav a {
   font-size: 16px; 
   border: none;
   outline: none;
