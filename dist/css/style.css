@@ -11,6 +11,10 @@
 * #fff3e0 orange lighten-5
 * #CFB53B GOLD
 */
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     margin: 0;
@@ -146,6 +150,69 @@ a:hover {
 /** 
 * NAVBAR 
 */
+.navbar__nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    font-family: inherit;
+    top: 0;
+    z-index: 1;
+}
+
+.fixed-nav .navbar__nav{
+    position: fixed;
+    width: 100%;
+}
+
+.navbar__nav a:hover {
+    text-decoration: none;
+}
+
+.navbar__dropdown {
+  overflow: hidden;
+  padding: 0;
+}
+
+.navbar__dropdown .dropbtn,
+.navbar__nav a {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navbar__dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.navbar__dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.navbar__dropdown-content a:hover {
+  background-color: #fff3e0;
+}
+
+.navbar__dropdown:hover .navbar__dropdown-content {
+  display: block;
+}
 
 /** 
 * OVERVIEW
