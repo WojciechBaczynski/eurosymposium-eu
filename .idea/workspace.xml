@@ -52,8 +52,12 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dist/views/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="369">
-                  <caret line="150" column="6" lean-forward="true" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
+                <state relative-caret-position="905">
+                  <caret line="155" column="46" lean-forward="true" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
+                  <folding>
+                    <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -173,7 +177,7 @@
       <workItem from="1552422717489" duration="1224000" />
       <workItem from="1552481005469" duration="2815000" />
       <workItem from="1552488675312" duration="2913000" />
-      <workItem from="1552585038569" duration="341000" />
+      <workItem from="1552585038569" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="[update] organizers + contact">
       <created>1551862667420</created>
@@ -203,11 +207,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552481718796</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Git conflict resolve">
+      <created>1552585471136</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1552585471136</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17678000" />
+    <option name="totallyTimeSpent" value="18061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -244,7 +255,8 @@
     <MESSAGE value="[hotfix] RELEVANT TOPICS margin updated" />
     <MESSAGE value="[update] Contact map" />
     <MESSAGE value="[update] Change file structure for routing &amp; fix files paths" />
-    <option name="LAST_COMMIT_MESSAGE" value="[update] Change file structure for routing &amp; fix files paths" />
+    <MESSAGE value="Git conflict resolve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Git conflict resolve" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dist/assets/img/ug_management.jpg">
@@ -304,8 +316,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="150" column="6" lean-forward="true" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
+        <state relative-caret-position="905">
+          <caret line="155" column="46" lean-forward="true" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
+          <folding>
+            <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
