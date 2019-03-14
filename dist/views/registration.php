@@ -273,8 +273,88 @@ if ($_POST['send']){
 </head>
 
 <body>
+<!--
+    ----------------------------------- NAVBAR -----------------------------------
+  -->
+<div class="navbar__nav orange lighten-2">
+    <div class="navbar__dropdown">
+        <button class="dropbtn">Conference
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navbar__dropdown-content">
+            <a href="#Overview">Overview</a>
+            <a href="https://link.springer.com/book/10.1007/978-3-030-00060-8">LNBIP 333 - free access</a>
+            <a href="#Keynotespeach">Keynote Speach</a>
+            <a href="#PreviousSymposia">Previous Symposia</a>
+            <a href="#RelevantTopics">Relevant Topics</a>
+            <a href="#Program">Program</a>
+            <a href="#Publication">Publication</a>
+            <a href="#ImportantDates">Important Dates</a>
+            <a href="#Venue">Venue</a>
+            <a href="#Accomodation">Accomodation</a>
+            <a href="#Contact">Contact</a>
+        </div>
+    </div>
+    <div class="navbar__dropdown">
+        <button class="dropbtn">Participation
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navbar__dropdown-content">
+            <a href="http://eurosymposium.eu/CfP_ES_2019.pdf">Call for Papers</a>
+            <a href="#PaperSubmission">Paper Submission</a>
+            <a href="registration.php">Registration</a>
+            <a href="#Fees">Fees</a>
+        </div>
+    </div>
+    <div class="navbar__dropdown">
+        <button class="dropbtn">Organizers
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navbar__dropdown-content">
+            <a href="http://wzr.pl/kie/">Department of Business Informatics</a>
+            <a href="http://plais.org/">PLAIS</a>
+            <a href="https://ais.site-ym.com/members/group.aspx?id=89782">AIS SIGSAND</a>
+        </div>
+    </div>
+    <div class="navbar__dropdown">
+        <button class="dropbtn">Committees
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navbar__dropdown-content">
+            <a href="#GeneralChair">General Chair</a>
+            <a href="#Advisory">Advisory Board</a>
+            <a href="#InternationalCommittee">International Programme Committee</a>
+            <a href="#OrganizingCommittee">Organizing Committee</a>
+        </div>
+    </div>
+    <div class="navbar__dropdown">
+        <button class="dropbtn">Keynonte Speeches
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navbar__dropdown-content">
+            <a href="http://eurosymposium.eu/#2007">ES2007</a>
+            <a href="http://eurosymposium.eu/#2013">ES2013</a>
+            <a href="http://eurosymposium.eu/#2014">ES2014</a>
+            <a href="http://eurosymposium.eu/#2015">ES2015</a>
+            <a href="http://eurosymposium.eu/#2016">ES2016</a>
+            <a href="http://eurosymposium.eu/#2017">ES2017</a>
+            <a href="http://eurosymposium.eu/#2018">ES2018</a>
+        </div>
+    </div>
+    <div class="navbar__dropdown">
+        <button class="dropbtn">Downloads
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="navbar__dropdown-content">
+            <a href="http://eurosymposium.eu/CfP_ES_2019.pdf">Call for Papers</a>
+            <a href="http://eurosymposium.eu/Poster_EuroSymposium2019.pdf">Poster</a>
+            <a href="#SIGSAND">PLAIS/SIGSAND EUROSYMPOSIA PROCEEDINGS</a>
+        </div>
+    </div>
+</div>
+
     <!--
-      ----------------------------------- ADD NAVBAR HERE -----------------------------------
+      ----------------------------------- FORM -----------------------------------
     -->
 
     <div class="container">
@@ -470,24 +550,26 @@ if ($_POST['send']){
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="blue-grey-text text-darken-3">Footer Content</h5>
+                    <h5 class="blue-grey-text text-darken-3">Click <a href="/registration">here</a> to register</h5>
                     <p class="blue-grey-text text-darken-3">
-                        You can use rows and columns here to organize your footer content.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, laborum.
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="blue-grey-text text-darken-3">Worth to see</h5>
                     <ul>
-                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdansk.pl/en/for-tourists">Gdańsk</a></li>
-                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdynia.pl/turystyczna-en">Gdynia</a></li>
-                        <li><a class="blue-grey-text text-darken-3" href="#!">Sopot</a></li>
+                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdansk.pl/en/for-tourists">Gdańsk</a>
+                        </li>
+                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdynia.pl/turystyczna-en">Gdynia</a>
+                        </li>
+                        <li><a class="blue-grey-text text-darken-3" href="#">Sopot</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container blue-grey-text text-darken-3">
-                &copy; 2018 Eurosymposium - All rights reserved
+                &copy; 2019 Eurosymposium - All rights reserved
 
                 <div class="blue-grey-text text-darken-3 right">
                     <span>Designed and created by&nbsp;</span><a href="http://e-xpert.pl/">E-xpert</a>
