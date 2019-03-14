@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3507510-ccf0-4f7b-9deb-95ef1597852f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/plais_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/ug_management.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vanilla.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vanilla.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,63 +14,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5882">
-                  <caret line="346" column="72" selection-start-line="346" selection-start-column="72" selection-end-line="346" selection-end-column="72" />
-                  <folding>
-                    <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/registration.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-85">
-                  <caret line="46" selection-start-line="46" selection-end-line="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.67116684">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/js/vanilla.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="525">
-                      <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/css/style.css">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="153">
-                      <caret line="92" column="3" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23092">
+              <caret line="1004" lean-forward="true" selection-start-line="1004" selection-end-line="1004" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/registration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="282" column="10" lean-forward="true" selection-start-line="282" selection-start-column="10" selection-end-line="282" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -90,6 +48,12 @@
       <find>contact</find>
       <find>relevant</find>
       <find>EVANT TOPI</find>
+      <find>PREVIOUS KEYNOTE SPEAKERS</find>
+      <find>http://eurosy</find>
+      <find>DOWNLOADS</find>
+      <find>poster</find>
+      <find>#poster</find>
+      <find>download</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,12 +66,14 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/vanilla.js" />
         <option value="$PROJECT_DIR$/registration.html" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/views/registration.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="2084" />
+    <option name="width" value="1915" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -132,7 +98,12 @@
               <item name="dist" type="b2602c69:ProjectViewProjectNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="pdf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,11 +150,20 @@
       <workItem from="1550082386976" duration="9038000" />
       <workItem from="1550172972764" duration="5505000" />
       <workItem from="1551180534720" duration="351000" />
+      <workItem from="1552599232698" duration="1853000" />
     </task>
+    <task id="LOCAL-00001" summary="[update] navbar links">
+      <created>1552600887559</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552600887559</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16256000" />
+    <option name="totallyTimeSpent" value="18109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -195,13 +175,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="2084" height="1407" extended-state="0" />
+    <frame x="-7" y="0" width="1915" height="1407" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08944281" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26478422" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32932693" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -209,7 +189,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32967034" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19309261" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18602826" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.18589744" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -261,6 +241,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="[update] navbar links" />
+    <option name="LAST_COMMIT_MESSAGE" value="[update] navbar links" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/materialize.min.js">
@@ -300,34 +282,33 @@
     <entry file="file://$PROJECT_DIR$/assets/img/header_carousel/5.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/registration.html" />
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5882">
-          <caret line="346" column="72" selection-start-line="346" selection-start-column="72" selection-end-line="346" selection-end-column="72" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="153">
+          <caret line="92" column="3" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/vanilla.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
+        <state relative-caret-position="318">
+          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="92" column="3" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
+        <state relative-caret-position="23092">
+          <caret line="1004" lean-forward="true" selection-start-line="1004" selection-end-line="1004" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="282" column="10" lean-forward="true" selection-start-line="282" selection-start-column="10" selection-end-line="282" selection-end-column="10" />
         </state>
       </provider>
     </entry>

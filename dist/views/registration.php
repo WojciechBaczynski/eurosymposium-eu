@@ -274,7 +274,16 @@ if ($_POST['send']){
 
 <body>
     <!--
-      ----------------------------------- ADD NAVBAR HERE -----------------------------------
+        ----------------------------------- NAVBAR -----------------------------------
+    -->
+
+    <div class="navbar__nav orange lighten-2" id="main">
+        <a href="/">Home</a>
+
+    </div>
+
+    <!--
+      ----------------------------------- FORM -----------------------------------
     -->
 
     <div class="container">
@@ -305,77 +314,65 @@ if ($_POST['send']){
                 <form action="#">
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
+                        <div class="input-field col s12 m6 l4 offset-l2">
                             <input placeholder="Title" type="text" name="title" maxlength="15" class="validate">
-                            <!--<label for="title">Title</label>-->
                         </div>
                         <div class="input-field col s12 m6 l4">
-                            <input placeholder="Organization" type="text" name="organization" maxlength="40" class="validate">
-                            <!--<label for="organization">Organization</label>-->
+                            <input placeholder="Organization*" type="text" name="organization" maxlength="40" class="validate">
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
-                            <input placeholder="Given Name" type="text" name="gname" maxlength="30" class="validate">
-                            <!-- <label for="first_name">First Name</label> -->
+                        <div class="input-field col s12 m6 l4 offset-l2">
+                            <input placeholder="Given Name*" type="text" name="gname" maxlength="30" class="validate">
                         </div>
                         <div class="input-field col s12 m6 l4">
-                            <input placeholder="Family Name" type="text" name="fname" maxlength="30" class="validate">
-                            <!-- <label for="last_name">Last Name</label> -->
+                            <input placeholder="Family Name*" type="text" name="fname" maxlength="30" class="validate">
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
-                            <input placeholder="Address" type="text" name="address" maxlength="50" class="validate">
-                            <!-- <label for="first_name">First Name</label> -->
+                        <div class="input-field col s12 m6 l4 offset-l2">
+                            <input placeholder="Address*" type="text" name="address" maxlength="50" class="validate">
                         </div>
                         <div class="input-field col s12 m6 l4">
-                            <input placeholder="Country" type="text" name="country" maxlength="50" class="validate">
-                            <!-- <label for="last_name">Last Name</label> -->
+                            <input placeholder="Country*" type="text" name="country" maxlength="50" class="validate">
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
+                        <div class="input-field col s12 m6 l4 offset-l2">
                             <input placeholder="City" type="text" name="city" maxlength="30" class="validate">
-                            <!-- <label for="first_name">First Name</label> -->
                         </div>
                         <div class="input-field col s12 m6 l4">
                             <input placeholder="Zip Code" type="text" name="zip" maxlength="15" class="validate">
-                            <!-- <label for="last_name">Last Name</label> -->
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
+                        <div class="input-field col s12 m6 l4 offset-l2">
                             <input placeholder="Email" type="email" id="mail" name="mail" maxlength="40" class="validate">
-                            <!-- <label for="first_name">First Name</label> -->
                         </div>
                         <div class="input-field col s12 m6 l4">
                             <input placeholder="Phone" type="tel" name="phone" maxlength="40" class="validate">
-                            <!-- <label for="last_name">Last Name</label> -->
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
+                        <div class="input-field col s12 m6 l4 offset-l2">
                             <input placeholder="Website" type="text" name="www" maxlength="40" class="validate">
-                            <!-- <label for="first_name">First Name</label> -->
                         </div>
                         <div class="input-field col s12 m6 l4">
                             <input placeholder="Comments" type="text" name="comm" maxlength="200" class="validate">
-                            <!-- <label for="last_name">Last Name</label> -->
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col s12">
+                        <div class="col s12 offset-l2">
                             <p>
                                 <label>
                                     <input type="radio" name="fee" value="80" />
-                                    <span>Regular, Residential Participation 85EUR(385PLN)</span>
+                                    <span>Regular, Residential Participation 85EUR(385PLN)*</span>
                                 </label>
                             </p>
                             <p>
@@ -389,29 +386,31 @@ if ($_POST['send']){
 
                     <hr>
 
-                    <div class="col s12">
+                    <div class="col s12 offset-l2">
                         <p>If you want the invoice, please fill in the required information</p>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
+                        <div class="input-field col s12 m6 l4 offset-l2">
                             <input placeholder="Organization" type="text" name="vat_org" maxlength="40" class="validate">
-                            <!-- <label for="first_name">First Name</label> -->
                         </div>
                         <div class="input-field col s12 m6 l4">
                             <input placeholder="Address" type="text" name="vat_add" maxlength="50" class="validate">
-                            <!-- <label for="last_name">Last Name</label> -->
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12 m6 l4">
+                        <div class="input-field col s12 m6 l4 offset-l2">
                             <input placeholder="VAT number" type="text" name="vat" maxlength="20" class="validate">
-                            <!-- <label for="first_name">First Name</label> -->
                         </div>
                     </div>
-                    <!--<a class="waves-effect waves-light btn">JOIN NOW</a>-->
-                    <a class="waves-effect waves-light btn"><input type="submit" value="SUBMIT" name="send"></a>
+
+                    <div class="row">
+                        <div class="input-field col s12 m6 l4 offset-l2">
+                            <input type="submit" class="waves-effect waves-light btn" value="SUBMIT" name="send" />
+                        </div>
+                    </div>
+                    <!-- <input type="submit" class="waves-effect waves-light btn" value="SUBMIT" name="send" /> -->
                 </form>
             </div>
         </div>
@@ -421,14 +420,26 @@ if ($_POST['send']){
                 <h5>After registration please transfer the registration fee at the following EuroSymposium'2018
                     account:</h5>
 
-                <h6>University of Gdansk</h6>
+                <!-- <h6>University of Gdansk</h6>
                 <h6>Address: ul. Bazynskiego 8, 80-309 Gdansk</h6>
-                <h6>EuroSymposium'2018</h6>
+                <h6>EuroSymposium'2018</h6> -->
+            </div>
+
+            <div class="row">
+                <div class="col s12 m9 l5 offset-l3">
+                    <div class="card-panel blue-grey darken-1">
+                        <span class="white-text">
+                        <h6>University of Gdansk</h6>
+                        <h6>Address: ul. Bazynskiego 8, 80-309 Gdansk</h6>
+                        <h6>EuroSymposium'2018</h6>
+                        </span>
+                    </div>
+                </div>
             </div>
 
 
             <div class="row">
-                <div class="col s12 m9 l5">
+                <div class="col s12 m9 l5 offset-l3">
                     <div class="card-panel blue-grey darken-1">
                         <span class="white-text">
                             <h6>PL 59 1240 1271 1111 0010 4368 2415</h6>
@@ -440,7 +451,7 @@ if ($_POST['send']){
             </div>
 
             <div class="row">
-                <div class="col s12 m9 l5">
+                <div class="col s12 m9 l5 offset-l3">
                     <div class="card-panel blue-grey darken-1">
                         <span class="white-text">
                             <h6>SWIFT: PKOPPLPW</h6>
@@ -470,24 +481,26 @@ if ($_POST['send']){
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="blue-grey-text text-darken-3">Footer Content</h5>
+                    <h5 class="blue-grey-text text-darken-3">Click <a href="/registration">here</a> to register</h5>
                     <p class="blue-grey-text text-darken-3">
-                        You can use rows and columns here to organize your footer content.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, laborum.
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="blue-grey-text text-darken-3">Worth to see</h5>
                     <ul>
-                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdansk.pl/en/for-tourists">Gdańsk</a></li>
-                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdynia.pl/turystyczna-en">Gdynia</a></li>
-                        <li><a class="blue-grey-text text-darken-3" href="#!">Sopot</a></li>
+                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdansk.pl/en/for-tourists">Gdańsk</a>
+                        </li>
+                        <li><a class="blue-grey-text text-darken-3" href="https://www.gdynia.pl/turystyczna-en">Gdynia</a>
+                        </li>
+                        <li><a class="blue-grey-text text-darken-3" href="#">Sopot</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container blue-grey-text text-darken-3">
-                &copy; 2018 Eurosymposium - All rights reserved
+                &copy; 2019 Eurosymposium - All rights reserved
 
                 <div class="blue-grey-text text-darken-3 right">
                     <span>Designed and created by&nbsp;</span><a href="http://e-xpert.pl/">E-xpert</a>
