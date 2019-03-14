@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3507510-ccf0-4f7b-9deb-95ef1597852f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/registration.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -153,12 +150,20 @@
       <workItem from="1550082386976" duration="9038000" />
       <workItem from="1550172972764" duration="5505000" />
       <workItem from="1551180534720" duration="351000" />
-      <workItem from="1552599232698" duration="1635000" />
+      <workItem from="1552599232698" duration="1853000" />
     </task>
+    <task id="LOCAL-00001" summary="[update] navbar links">
+      <created>1552600887559</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552600887559</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17891000" />
+    <option name="totallyTimeSpent" value="18109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -171,7 +176,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1915" height="1407" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26478422" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -237,6 +241,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="[update] navbar links" />
+    <option name="LAST_COMMIT_MESSAGE" value="[update] navbar links" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/materialize.min.js">
