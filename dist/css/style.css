@@ -272,6 +272,7 @@ a:hover {
 
     .dropdown__list {
         position: absolute;
+        max-width: 350px;
     }
     .dropdown__item {
         max-width: 350px;
@@ -279,6 +280,7 @@ a:hover {
 
     .dropdown__item a {
         padding: 0;
+        margin-left: 10px;
     }
 
     .dropdwon__button {
