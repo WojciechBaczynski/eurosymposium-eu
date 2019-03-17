@@ -19,22 +19,9 @@ window.onload = function () {
 
 // ------------------- HEADER -------------------
 header.initHeaderView = function () {
-    header.getSentenceContent();
-    header.getCarouselContent();
+    header.getNextSentence();
+    header.getNextImage();
 };
-
-M.toast({html: 'SCROLL DOWN', classes: "rounded", displayLength: 30000});
-
-$(document).ready(function () {
-  $(".toast").click(function() {
-    $('html, body').animate({
-      scrollTop: $("#Overview").offset().top
-  }, 500);
-  var toastElement = document.querySelector('.toast');
-  var toastInstance = M.Toast.getInstance(toastElement);
-  toastInstance.dismiss();
-  });
-});
 
 header.setCarousel = function (main, prev, next) {
   var mainImage = document.querySelector(
@@ -52,87 +39,58 @@ header.setCarousel = function (main, prev, next) {
 };
 
 header.getCarouselContent = function () {
-  const images = header.images;
-  const indicators = document.querySelectorAll(".welcome-wrapper__indicators-indicator");
+  var images = header.images;
+  var indicators = document.querySelectorAll(".welcome-wrapper__indicators-indicator");
+  if (numberCarousel == images.length) {
+    numberCarousel = 0;
+  } else if (numberCarousel < 0) {
+    numberCarousel = images.length - 1;
+  }
+  var prevNumber = numberCarousel-1;
+  if(prevNumber<0) {
+    prevNumber=4;
+  }
+  var nextNumber = numberCarousel+1;
+  if(nextNumber>4) {
+    nextNumber=0;
+  }
+  var mainImage = images[numberCarousel].image;
+  prevImage = images[prevNumber].image;
+  nextImage = images[nextNumber].image;
+  header.setCarousel(mainImage, prevImage, nextImage);
+  var activeIndicator = document.querySelectorAll(".activeIndicator");
+  activeIndicator[0].className = activeIndicator[0].className.replace(" activeIndicator", "");
+  $(indicators[numberCarousel]).addClass(" activeIndicator");
+};
+
+header.getNextImage = function () {
 
   carouselInterval = setInterval(function () {
-      prevNumber = numberCarousel-1;
-      if(prevNumber<0) {
-        prevNumber=4;
-      }
-      nextNumber = numberCarousel+1;
-      if(nextNumber>4) {
-        nextNumber=0;
-      }
-      mainImage = images[numberCarousel].image;
-      prevImage = images[prevNumber].image;
-      nextImage = images[nextNumber].image;
-      header.setCarousel(mainImage, prevImage, nextImage);   
-      var activeIndicator = document.querySelectorAll(".activeIndicator");
-      activeIndicator[0].className = activeIndicator[0].className.replace(" activeIndicator", "");
-      $(indicators[numberCarousel]).addClass(" activeIndicator");
       numberCarousel++;
-      if (numberCarousel == images.length) {
-          numberCarousel = 0;
-      }
+      header.getCarouselContent();
   }, 3500);
 };
 
 $(document).ready(function () {
   $(".welcome-wrapper__carousel-slider-prev").click(function () {
-    var images = header.images;
     numberCarousel--;
-    if (numberCarousel < 0) {
-      numberCarousel = images.length - 1;
-    }
-    prevNumber = numberCarousel-1;
-    if(prevNumber<0) {
-      prevNumber=4;
-    }
-    nextNumber = numberCarousel+1;
-    if(nextNumber>4) {
-      nextNumber=0;
-    }
-    mainImage = images[numberCarousel].image;
-    prevImage = images[prevNumber].image;
-    nextImage = images[nextNumber].image;
-    header.setCarousel(mainImage, prevImage, nextImage);
-    if (numberCarousel == images.length) {
-      numberCarousel = 0;
-    }
+    header.getCarouselContent();
   });
 
   $(".welcome-wrapper__carousel-slider-next").click(function () {
-    var images = header.images;
     numberCarousel++;
-    if (numberCarousel == images.length) {
-      numberCarousel = 0;
-    }
-    prevNumber = numberCarousel-1;
-    if(prevNumber<0) {
-      prevNumber=4;
-    }
-    nextNumber = numberCarousel+1;
-    if(nextNumber>4) {
-      nextNumber=0;
-    }
-    mainImage = images[numberCarousel].image;
-    prevImage = images[prevNumber].image;
-    nextImage = images[nextNumber].image;
-    header.setCarousel(mainImage, prevImage, nextImage);
+    header.getCarouselContent();
   });
 
   $(".welcome-wrapper__indicators-indicator").click(function () {
-    const indicators = document.querySelectorAll(".welcome-wrapper__indicators-indicator");
-    var clickedIndicator = $(this).attr("class");
-    for(i = 0; i < indicators.length; i++) {
-      indicators[i].addEventListener("click", function () {
-        var carouselImage = header.images[i].image;
-        console.log(header.images[0].image);
-        var activeIndicator = document.querySelectorAll(".activeIndicator");
-        activeIndicator[0].className = activeIndicator[0].className.replace(" activeIndicator", "");
-        $(this).addClass(" activeIndicator");
-      });
+    var images = header.images;
+    var clickedIndicatorId = $(this).attr("id");
+    for(i = 0; i < images.length; i++) {
+      var carouselImageCountry = header.images[i].id;
+      if(clickedIndicatorId.includes(carouselImageCountry)) {
+        numberCarousel = i;
+        header.getCarouselContent();
+      }
     }
   });
 });
@@ -142,36 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Tooltip.init(elems, {
     enterDelay: "200"
   });
-});
-
-$(document).ready(function () {
-  $(".image__flag-64x38").click(function () {
-      const flags = document.querySelectorAll(".image__flag-64x38");
-      var clickedCountry = $(this).attr("class");
-      var sentences = header.sentences;
-      var arrYear;
-      var arrText;
-      for (i = 0; i < flags.length; i++) {
-          var sentenceCountry = header.sentences[i].country;
-          flags[i].addEventListener("click", function () {
-              var previousFlagParent = document.querySelectorAll(".active");
-              previousFlagParent[0].className = previousFlagParent[0].className.replace(" active", "");
-              $(this).parent().addClass(" active");
-          });
-          if (clickedCountry.includes(sentenceCountry)) {
-            numberCountry = i;
-              arrYear = sentences[numberCountry].year;
-              arrText = sentences[numberCountry].sentence;
-              header.setSentence(arrYear, arrText);
-              var currentParent = document.querySelectorAll(".active");
-              currentParent[0].className = currentParent[0].className.replace(" active", "");
-              $(flags[numberCountry]).parent().addClass(" active");
-              if (numberCountry == sentences.length) {
-                  numberCountry = 0;
-              }
-          };
-      };
-    });
 });
 
 header.setSentence = function (year, text) {
@@ -188,24 +116,43 @@ header.setSentence = function (year, text) {
 
 header.getSentenceContent = function () {
   var sentences = header.sentences;
-  var arrYear;
-  var arrText;
   var flags = document.querySelectorAll(".image__flag-64x38");
+  var arrYear = sentences[numberCountry].year;
+  var arrText = sentences[numberCountry].sentence;
+  header.setSentence(arrYear, arrText);
+  var activeParent = document.querySelectorAll(".active");
+  activeParent[0].className = activeParent[0].className.replace(" active", "");
+  $(flags[numberCountry]).parent().addClass(" active");
+};
 
-
+header.getNextSentence = function () {
+  var sentences = header.sentences;
   countriesInterval = setInterval(function () {
-    arrYear = sentences[numberCountry].year;
-    arrText = sentences[numberCountry].sentence;
-    header.setSentence(arrYear, arrText);
-    var activeParent = document.querySelectorAll(".active");
-    activeParent[0].className = activeParent[0].className.replace(" active", "");
-    $(flags[numberCountry]).parent().addClass(" active");
+    header.getSentenceContent();
     numberCountry++;
     if (numberCountry == sentences.length) {
       numberCountry = 0;
     }
   }, 3500);
 };
+
+$(document).ready(function () {
+  $(".image__flag-64x38").click(function () {
+    var sentences = header.sentences;
+    var flags = document.querySelectorAll(".image__flag-64x38");
+    var clickedCountry = $(this).attr("class");
+    for (i = 0; i < flags.length; i++) {
+      var sentenceCountry = sentences[i].country;
+      if (clickedCountry.includes(sentenceCountry)) {
+        numberCountry = i;
+        header.getSentenceContent();
+        if (numberCountry == sentences.length) {
+          numberCountry = 0;
+        }
+      };
+    };
+  });
+});
 
 //---NAV---
 const nav = document.querySelector('#main');
