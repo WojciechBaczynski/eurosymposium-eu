@@ -16,6 +16,93 @@
 </head>
 
 <body>
+
+    <!--
+    ----------------------------------- NAVBAR -----------------------------------
+    -->
+
+    <nav class="navbar" data-function="navbar" id="main">
+        <div class="navbar__hamburger">
+            <i class="fas fa-bars" data-function="menu-button"></i>
+        </div>
+        <ul class="navbar__list" data-function="menu-list">
+            <li class="navbar__item"><a href="/">Home</a></li>
+            <li class="navbar__item">
+                <div class="navbar__dropdown" data-menu="conference-dropdown">
+                    <span class="dropdwon__button">Conference</span>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a href="#Overview">Overview</a></li>
+                        <li class="dropdown__item"><a href="https://link.springer.com/book/10.1007/978-3-030-00060-8">LNBIP 333 - free access</a></li>
+                        <li class="dropdown__item"><a href="#Keynotespeach">Keynote Speach</a></li>
+                        <li class="dropdown__item"><a href="#PreviousSymposia">Previous Symposia</a></li>
+                        <li class="dropdown__item"><a href="#RelevantTopics">Relevant Topics</a></li>
+                        <li class="dropdown__item"><a href="#Program">Program</a></li>
+                        <li class="dropdown__item"><a href="#Publication">Publication</a></li>
+                        <li class="dropdown__item"><a href="#ImportantDates">Important Dates</a></li>
+                        <li class="dropdown__item"><a href="#Venue">Venue</a></li>
+                        <li class="dropdown__item"><a href="#Accomodation">Accomodation</a></li>
+                        <li class="dropdown__item"><a href="#Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar__item">
+                <div class="navbar__dropdown" data-menu="participation-dropdown">
+                    <span class="dropdwon__button">Participation</span>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a href="./../assets/pdf/CfP_ES_2018.pdf" target="_blank" rel="noopener noreferrer">Call for Papers</a></li>
+                        <li class="dropdown__item"><a href="#PaperSubmission">Paper Submission</a></li>
+                        <li class="dropdown__item"><a href="/registration">Registration</a></li>
+                        <li class="dropdown__item"><a href="#Fees">Fees</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar__item">
+                <div class="navbar__dropdown" data-menu="organizers-dropdown">
+                    <span class="dropdwon__button">Organizers</span>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a href="http://wzr.pl/kie/">Department of Business Informatics</a></li>
+                        <li class="dropdown__item"><a href="http://plais.org/">PLAIS</a></li>
+                        <li class="dropdown__item"><a href="https://ais.site-ym.com/members/group.aspx?id=89782">AIS SIGSAND</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar__item">
+                <div class="navbar__dropdown" data-menu="committees-dropdown">
+                    <span class="dropdwon__button">Committees</span>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a href="#GeneralChair">General Chair</a></li>
+                        <li class="dropdown__item"><a href="#Advisory">Advisory Board</a></li>
+                        <li class="dropdown__item"><a href="#InternationalCommittee">International Programme Committee</a></li>
+                        <li class="dropdown__item"><a href="#OrganizingCommittee">Organizing Committee</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar__item">
+                <div class="navbar__dropdown" data-menu="keynote-dropdown">
+                    <span class="dropdwon__button">Keynote Speeches</span>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a href="#2007">ES2007</a></li>
+                        <li class="dropdown__item"><a href="#2013">ES2013</a></li>
+                        <li class="dropdown__item"><a href="#2014">ES2014</a></li>
+                        <li class="dropdown__item"><a href="#2016">ES2016</a></li>
+                        <li class="dropdown__item"><a href="#2017">ES2017</a></li>
+                        <li class="dropdown__item"><a href="#2018">ES2018</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar__item">
+                <div class="navbar__dropdown" data-menu="downloads-dropdown">
+                    <span class="dropdwon__button">Downloads</span>
+                    <ul class="dropdown__list">
+                        <li class="dropdown__item"><a href="#cfp">Call for Papers</a></li>
+                        <li class="dropdown__item"><a href="#poster">Poster</a></li>
+                        <li class="dropdown__item"><a href="#SIGSAND">PLAIS/SIGSAND EUROSYMPOSIA PROCEEDINGS</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
   <!--
       ----------------------------------- HEADER -----------------------------------
     -->
@@ -146,87 +233,7 @@
             </div>
         </div>
     </section>
-    <!--
-    ----------------------------------- NAVBAR -----------------------------------
-  -->
 
-    <div class="navbar__nav orange lighten-2" id="main">
-        <a href="/">Home</a>
-        <div class="navbar__dropdown">
-            <button class="dropbtn">Conference
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="navbar__dropdown-content">
-                <a href="#Overview">Overview</a>
-                <a href="https://link.springer.com/book/10.1007/978-3-030-00060-8">LNBIP 333 - free access</a>
-                <a href="#Keynotespeach">Keynote Speach</a>
-                <a href="#PreviousSymposia">Previous Symposia</a>
-                <a href="#RelevantTopics">Relevant Topics</a>
-                <a href="#Program">Program</a>
-                <a href="#Publication">Publication</a>
-                <a href="#ImportantDates">Important Dates</a>
-                <a href="#Venue">Venue</a>
-                <a href="#Accomodation">Accomodation</a>
-                <a href="#Contact">Contact</a>
-            </div>
-        </div>
-        <div class="navbar__dropdown">
-            <button class="dropbtn">Participation
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="navbar__dropdown-content">
-                <a href="./../assets/pdf/CfP_ES_2018.pdf" target="_blank" rel="noopener noreferrer">Call for Papers</a>
-                <a href="#PaperSubmission">Paper Submission</a>
-                <a href="/registration">Registration</a>
-                <a href="#Fees">Fees</a>
-            </div>
-        </div>
-        <div class="navbar__dropdown">
-            <button class="dropbtn">Organizers
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="navbar__dropdown-content">
-                <a href="http://wzr.pl/kie/">Department of Business Informatics</a>
-                <a href="http://plais.org/">PLAIS</a>
-                <a href="https://ais.site-ym.com/members/group.aspx?id=89782">AIS SIGSAND</a>
-            </div>
-        </div>
-        <div class="navbar__dropdown">
-            <button class="dropbtn">Committees
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="navbar__dropdown-content">
-                <a href="#GeneralChair">General Chair</a>
-                <a href="#Advisory">Advisory Board</a>
-                <a href="#InternationalCommittee">International Programme Committee</a>
-                <a href="#OrganizingCommittee">Organizing Committee</a>
-            </div>
-        </div>
-        <div class="navbar__dropdown">
-            <button class="dropbtn">Keynonte Speeches
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="navbar__dropdown-content">
-                <a href="#2007">ES2007</a>
-                <a href="#2013">ES2013</a>
-                <a href="#2014">ES2014</a>
-                <a href="#2015">ES2015</a>
-                <a href="#2016">ES2016</a>
-                <a href="#2017">ES2017</a>
-                <a href="#2018">ES2018</a>
-            </div>
-        </div>
-        <div class="navbar__dropdown">
-            <button class="dropbtn">Downloads
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="navbar__dropdown-content">
-                <a href="#cfp">Call for Papers</a>
-                <a href="#poster">Poster</a>
-                <a href="#SIGSAND">PLAIS/SIGSAND EUROSYMPOSIA PROCEEDINGS</a>
-            </div>
-        </div>
-    </div>
 
     <!--
     ----------------------------------- OVERVIEW -----------------------------------
@@ -1749,9 +1756,6 @@
 
     <script src="../js/materialize.min.js"></script>
     <script src="../js/vanilla.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAaK7iYnm3o9MIFo5KWGmu1rJsjbLans0&callback=initMap">
-        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 

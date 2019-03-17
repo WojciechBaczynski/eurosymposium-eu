@@ -1,9 +1,3 @@
-<!-- 
-    ----
-        NEW VERSION 
-    ----
--->
-
 <?php
 
 
@@ -277,10 +271,11 @@ if ($_POST['send']){
         ----------------------------------- NAVBAR -----------------------------------
     -->
 
-    <div class="navbar__nav orange lighten-2" id="main">
-        <a href="/">Home</a>
-
-    </div>
+    <nav class="navbar" data-function="navbar" id="main">
+        <ul class="navbar__list" data-function="menu-list" style="display: block;">
+            <li class="navbar__item" style="background: orange;"><a href="/">Home</a></li>
+        </ul>
+    </nav>
 
     <!--
       ----------------------------------- FORM -----------------------------------
@@ -288,13 +283,13 @@ if ($_POST['send']){
 
     <div class="container">
         <div class="row">
-            <div class="col s12">
+            <div class="col s12" style="text-align: center;">
                 <h3>The XIth SIGSAND/PLAIS EuroSymposium'2018</h3>
                 <h4>INFORMATION SYSTEMS -</h4>
                 <h4>RESEARCH, DEVELOPMENT, APPLICATIONS, EDUCATION</h4>
                 <h4>September 20, 2018 Gdansk & Sopot - Poland</h4>
             </div>
-            <div class="col s12">
+            <div class="col s12" style="text-align: justify;">
                 The regular EuroSymposium fee is 85 EUR (385 PLN), while the fee for videoconference participants is 40
                 EUR (180 PLN). The fee includes :
 
@@ -311,7 +306,7 @@ if ($_POST['send']){
         <!-- REGISTRATION FORM -->
         <div class="row">
             <div class="col s12">
-                <form action="#">
+                <form id="registration" name="registration" action="?page=registration" method="POST" onsubmit="javascript:return validate('registration','mail');">
 
                     <div class="row">
                         <div class="input-field col s12 m6 l4 offset-l2">
@@ -384,7 +379,11 @@ if ($_POST['send']){
                         </div>
                     </div>
 
-                    <hr>
+                    <div class="row">
+                        <div class="input-field col s8 offset-l2">
+                            <input placeholder="Type word 'EuroSymposium' into this field*" type="text" name="sprawdz" maxlength="13" class="validate">
+                        </div>
+                    </div>
 
                     <div class="col s12 offset-l2">
                         <p>If you want the invoice, please fill in the required information</p>
@@ -417,7 +416,7 @@ if ($_POST['send']){
         <!-- Transfer -->
         <div class="row">
             <div class="col s12">
-                <h5>After registration please transfer the registration fee at the following EuroSymposium'2018
+                <h5 style="text-align: justify;">After registration please transfer the registration fee at the following EuroSymposium'2018
                     account:</h5>
 
                 <!-- <h6>University of Gdansk</h6>
@@ -426,7 +425,7 @@ if ($_POST['send']){
             </div>
 
             <div class="row">
-                <div class="col s12 m9 l5 offset-l3">
+                <div class="col s12 m8 l6 offset-l3 offset-m2">
                     <div class="card-panel blue-grey darken-1">
                         <span class="white-text">
                         <h6>University of Gdansk</h6>
@@ -439,7 +438,7 @@ if ($_POST['send']){
 
 
             <div class="row">
-                <div class="col s12 m9 l5 offset-l3">
+                <div class="col s12 m8 l6 offset-l3 offset-m2">
                     <div class="card-panel blue-grey darken-1">
                         <span class="white-text">
                             <h6>PL 59 1240 1271 1111 0010 4368 2415</h6>
@@ -451,7 +450,7 @@ if ($_POST['send']){
             </div>
 
             <div class="row">
-                <div class="col s12 m9 l5 offset-l3">
+                <div class="col s12 m8 l6 offset-l3 offset-m2">
                     <div class="card-panel blue-grey darken-1">
                         <span class="white-text">
                             <h6>SWIFT: PKOPPLPW</h6>
@@ -465,7 +464,7 @@ if ($_POST['send']){
 
             <div class="row">
                 <div class="col s12">
-                    <h6>
+                    <h6 style="text-align: center;">
                         Please include a "K205-18 - ES_2018 (name) (surname)" phrase in the text of your bank transfer.
                     </h6>
                 </div>
