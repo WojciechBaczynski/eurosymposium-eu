@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f2e9928-0638-4b67-b368-63be9b35b12d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/vanilla.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/vanilla.js" afterDir="false" />
-    </list>
+    <list default="true" id="5f2e9928-0638-4b67-b368-63be9b35b12d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -30,8 +27,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dist/js/vanilla.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="509">
-                  <caret line="216" selection-start-line="216" selection-end-line="216" />
+                <state relative-caret-position="115">
+                  <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
                   <folding>
                     <element signature="e#1031#1377#0" />
                     <element signature="e#1420#2334#0" />
@@ -182,7 +179,7 @@
       <workItem from="1552666616413" duration="569000" />
       <workItem from="1552681824989" duration="538000" />
       <workItem from="1552826571355" duration="2774000" />
-      <workItem from="1552829607372" duration="379000" />
+      <workItem from="1552829607372" duration="515000" />
     </task>
     <task id="LOCAL-00001" summary="[update] organizers + contact">
       <created>1551862667420</created>
@@ -268,11 +265,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552829271795</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[update] dropdown js refactored">
+      <created>1552830034573</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1552830034574</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33672000" />
+    <option name="totallyTimeSpent" value="33808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1744" height="1407" extended-state="0" />
@@ -317,7 +321,8 @@
     <MESSAGE value="[update] responsive menu + merge" />
     <MESSAGE value="[update] menu color" />
     <MESSAGE value="[update] dropdown size" />
-    <option name="LAST_COMMIT_MESSAGE" value="[update] dropdown size" />
+    <MESSAGE value="[update] dropdown js refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="[update] dropdown js refactored" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dist/assets/img/ug_management.jpg">
@@ -385,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/js/vanilla.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        <state relative-caret-position="115">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding>
             <element signature="e#1031#1377#0" />
             <element signature="e#1420#2334#0" />
