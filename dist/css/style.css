@@ -35,8 +35,10 @@ a:hover {
 
 .welcome-wrapper {
     height: calc(100vh - 52px);
+    margin-top: 64px;
     background-color: #f7f7f7;
-    margin: auto;
+    display: flex;
+    align-items: center;
 }
 
 .welcome-wrapper__carusel {
