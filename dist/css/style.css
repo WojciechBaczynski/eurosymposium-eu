@@ -193,7 +193,8 @@ a:hover {
 .navbar__item {
     display: block;
     width: 100%;
-    background: tomato;
+    /*background: #e49a13;*/
+    background: #ffb327;
     cursor: pointer;
 }
 
