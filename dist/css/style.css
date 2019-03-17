@@ -39,6 +39,7 @@ a:hover {
     background-color: #f7f7f7;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .welcome-wrapper__carusel {

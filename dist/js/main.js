@@ -201,7 +201,6 @@ navbarObj.showDropdown = function($object) {
   }
 
   if (isOpen) {
-    console.log('show class removed');
     $object.find('.dropdown__list').removeClass('dropdown__list--show');
   } else {
     switch (submenu) {
@@ -266,7 +265,6 @@ releventTopics.initReleventTopicView = function () {
       var cell = document.createTextNode(topicArr[index]);
 
       if (cell.toString().valueOf() === "undefined") {
-        console.log('--------------------');
         td.appendChild("");
       } else {
         td.appendChild(cell);
@@ -289,32 +287,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// ------------------- VENUE -------------------
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     console.log('addEventListener ready');
-//     let options = {duration: 200, dist: 10, numVisible: 2, fullWidth: true, indicators: true};
-//
-//     var elems = document.querySelectorAll('.carousel');
-//     var instances = M.Carousel.init(elems, options);
-//     var instance = M.Carousel.getInstance(elem);
-//
-//     setInterval(function () {
-//         instance.next();
-//         console.log('setInterval ready');
-//     }, 2000);
-// });
-
-
-// ------------------- CONTACT -------------------
-
-// Initialize and add the map
-// function initMap() {
-//     var uluru = {lat: 54.44509067666397, lng: 18.553553223609924};
-//     var map = new google.maps.Map(
-//         document.querySelector('.contact__map'), {zoom: 16, center: uluru});
-//     var marker = new google.maps.Marker({position: uluru, map: map});
-// }
 
 
 // Long arrays and HTML templates leave at the bottom of the file
