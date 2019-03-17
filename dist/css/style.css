@@ -152,7 +152,10 @@ a:hover {
     height: 64px;
     width: 100%;
     background: orange;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .navbar__hamburger {
