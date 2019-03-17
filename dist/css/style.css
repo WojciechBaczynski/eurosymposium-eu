@@ -241,7 +241,7 @@ a:hover {
 .dropdown__item {
     display: block;
     width: 100%;
-    background: aquamarine;
+    background: #546e7a;
 }
 
 .dropdown__item:hover {
