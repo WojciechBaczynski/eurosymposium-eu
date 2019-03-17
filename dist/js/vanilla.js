@@ -1,9 +1,10 @@
-header = {};
+var header = {};
 header.images = [];
 header.sentences = [];
-overview = {};
-keynoteSpeach = {};
-releventTopics = {};
+var overview = {};
+var keynoteSpeach = {};
+var releventTopics = {};
+var navbarObj = {};
 
 var numberCarousel = 0;
 var numberCountry = 0;
@@ -14,6 +15,7 @@ var countriesInterval;
 window.onload = function () {
   // Pass here all functions which should start at the beginning
   header.initHeaderView();
+  navbarObj.initNavbarView();
   releventTopics.initReleventTopicView();
 };
 
@@ -210,11 +212,8 @@ header.getSentenceContent = function () {
 
 //------------------- NAVBAR -------------------
 
-var navbarObj = {};
 
-navbarObj.initView = function () {
-  console.log('initview');
-
+navbarObj.initNavbarView = function () {
   $('[data-function="menu-button"]').unbind('click').click(function (e) {
     navbarObj.toggleMenu();
     e.stopPropagation();
@@ -256,9 +255,6 @@ navbarObj.showDropdown = function($object) {
     isOpen = false;
   }
 
-  console.log('isOpen --> ' + isOpen);
-
-
   if (isOpen) {
     console.log('show class removed');
     $object.find('.dropdown__list').removeClass('dropdown__list--show');
@@ -294,7 +290,6 @@ navbarObj.showDropdown = function($object) {
 
 // Hide menu dropdowns
 navbarObj.hideDropdown = function() {
-  console.log('hideDropdown called');
   var $overview = $('[data-function="navbar"]');
 
   var list = $overview.find('.dropdown__list');
@@ -305,13 +300,8 @@ navbarObj.hideDropdown = function() {
 }
 
 navbarObj.hideCurrentDropdown = function($dropItem) {
-  console.log('hideCurrentDropdown called');
-
   $dropItem.parents('.dropdown__list').removeClass('dropdown__list--show');
 }
-
-$(document).ready(navbarObj.initView);
-
 
 // ------------------- OVERVIEW -------------------
 
@@ -329,7 +319,6 @@ releventTopics.initReleventTopicView = function () {
     for (var i = 1; i < 4; i++) {
       var td = document.createElement('td');
       var cell = document.createTextNode(topicArr[index]);
-      console.log(typeof cell.toString().valueOf());
 
       if (cell.toString().valueOf() === "undefined") {
         console.log('--------------------');
