@@ -23,18 +23,19 @@ header.initHeaderView = function () {
     header.getCarouselContent();
 };
 
-M.toast({html: 'SCROLL DOWN', classes: "rounded", displayLength: 30000});
-
-$(document).ready(function () {
-  $(".toast").click(function() {
-    $('html, body').animate({
-      scrollTop: $("#Overview").offset().top
-  }, 500);
-  var toastElement = document.querySelector('.toast');
-  var toastInstance = M.Toast.getInstance(toastElement);
-  toastInstance.dismiss();
-  });
-});
+// TO REMOVE
+// M.toast({html: 'SCROLL DOWN', classes: "rounded", displayLength: 30000});
+//
+// $(document).ready(function () {
+//   $(".toast").click(function() {
+//     $('html, body').animate({
+//       scrollTop: $("#Overview").offset().top
+//   }, 500);
+//   var toastElement = document.querySelector('.toast');
+//   var toastInstance = M.Toast.getInstance(toastElement);
+//   toastInstance.dismiss();
+//   });
+// });
 
 header.setCarousel = function (main, prev, next) {
   var mainImage = document.querySelector(
@@ -207,18 +208,110 @@ header.getSentenceContent = function () {
   }, 3500);
 };
 
-//---NAV---
-const nav = document.querySelector('#main');
-const topOfNav = nav.offsetTop;
-function fixNav() {
-  if (window.scrollY >= topOfNav) {
-    document.body.style.paddingTop = nav.offsetHeight + 'px';
-    document.body.classList.add('fixed-nav');
+//------------------- NAVBAR -------------------
+
+var navbarObj = {};
+
+navbarObj.initView = function () {
+  console.log('initview');
+
+  $('[data-function="menu-button"]').unbind('click').click(function (e) {
+    navbarObj.toggleMenu();
+    e.stopPropagation();
+  });
+
+  // ON CLICK NAVBAR ITEM
+  $('[data-menu]').unbind('click').click(function (e) {
+    navbarObj.showDropdown($(this));
+    e.stopPropagation();
+  });
+
+  // ON CLICK DROPDOWN ITEM
+  $('.dropdown__item').unbind('click').click(function (e) {
+    navbarObj.hideCurrentDropdown($(this));
+    navbarObj.toggleMenu();
+    e.stopPropagation();
+  });
+}
+
+// Show or hide menu
+navbarObj.toggleMenu = function () {
+  var $menuList = $('[data-function="menu-list"]');
+
+  if ($menuList.hasClass('navbar__list--show')) {
+    $menuList.removeClass('navbar__list--show');
   } else {
-    document.body.classList.remove('fixed-nav');
+    $menuList.addClass('navbar__list--show');
   }
 }
-window.addEventListener('scroll', fixNav);
+
+// Show dropdown
+navbarObj.showDropdown = function($object) {
+  var submenu = $object.attr('data-menu');
+  var isOpen = undefined;
+
+  if ($object.find('.dropdown__list').hasClass('dropdown__list--show')) {
+    isOpen = true;
+  } else {
+    isOpen = false;
+  }
+
+  console.log('isOpen --> ' + isOpen);
+
+
+  if (isOpen) {
+    console.log('show class removed');
+    $object.find('.dropdown__list').removeClass('dropdown__list--show');
+  } else {
+    switch (submenu) {
+      case "conference-dropdown":
+        navbarObj.hideDropdown();
+        $('[data-menu="' + submenu + '"]').find('.dropdown__list').addClass('dropdown__list--show');
+        break;
+      case "participation-dropdown":
+        navbarObj.hideDropdown();
+        $('[data-menu="' + submenu + '"]').find('.dropdown__list').addClass('dropdown__list--show');
+        break;
+      case "organizers-dropdown":
+        navbarObj.hideDropdown();
+        $('[data-menu="' + submenu + '"]').find('.dropdown__list').addClass('dropdown__list--show');
+        break;
+      case "committees-dropdown":
+        navbarObj.hideDropdown();
+        $('[data-menu="' + submenu + '"]').find('.dropdown__list').addClass('dropdown__list--show');
+        break;
+      case "keynote-dropdown":
+        navbarObj.hideDropdown();
+        $('[data-menu="' + submenu + '"]').find('.dropdown__list').addClass('dropdown__list--show');
+        break;
+      case "downloads-dropdown":
+        navbarObj.hideDropdown();
+        $('[data-menu="' + submenu + '"]').find('.dropdown__list').addClass('dropdown__list--show');
+        break;
+    }
+  }
+}
+
+// Hide menu dropdowns
+navbarObj.hideDropdown = function() {
+  console.log('hideDropdown called');
+  var $overview = $('[data-function="navbar"]');
+
+  var list = $overview.find('.dropdown__list');
+
+  $.each(list, function(i, element) {
+    $(element).removeClass('dropdown__list--show');
+  })
+}
+
+navbarObj.hideCurrentDropdown = function($dropItem) {
+  console.log('hideCurrentDropdown called');
+
+  $dropItem.parents('.dropdown__list').removeClass('dropdown__list--show');
+}
+
+$(document).ready(navbarObj.initView);
+
 
 // ------------------- OVERVIEW -------------------
 
